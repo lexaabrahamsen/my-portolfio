@@ -3,9 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import About from './Section/About';
 import Projects from './Section/Projects';
-// import { CodeIcon } from "@heroicons/react/solid";
-import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
-import { CodeBracketIcon } from '@heroicons/react/24/outline';
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -13,7 +10,6 @@ import { Github } from '@styled-icons/bootstrap/Github';
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin';
 import { Mastodon } from '@styled-icons/bootstrap/Mastodon';
 import { Instagram } from '@styled-icons/bootstrap/Instagram';
-
 
 const navigation = [
   { name: 'About', href: '#' },
@@ -73,7 +69,7 @@ function App() {
           onClose={setMobileMenuOpen}
         >
           <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-blue px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-end">
               <button
                 type="button"
@@ -97,19 +93,26 @@ function App() {
                     </a>
                   ))}
                 </div>
-                <div className="py-6">Github LinkedIn Mastadon Instagram</div>
                 <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
-                  <span className="cursor-pointer rounded-full border border-white-500/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100 group-hover:opacity-70">
-                    <Github style={{ color: 'red' }} className="h-5 w-5" />
+                  <a href="https://github.com/lexaabrahamsen" target="_blank">
+                    <span className="cursor-pointer rounded-full bg-white border border-white-200/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100 group-hover:opacity-70">
+                      <Github className="h-5 w-5" />
+                    </span>
+                  </a>
+                  <span className="cursor-pointer rounded-full bg-white border border-white-200/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100 group-hover:opacity-70">
+                    <a href="https://www.linkedin.com/in/lexa-abrahamsen/" target="_blank">
+                      <Linkedin className="h-5 w-5" />
+                    </a>
                   </span>
-                  <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                    <Mastodon style={{ color: 'red' }} className="h-5 w-5" />
+                  <span className="cursor-pointer rounded-full bg-white border border-white-200/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100 group-hover:opacity-70">
+                    <a href="https://www.instagram.com/lexaraea/?hl=en" target="_blank">
+                      <Instagram className="h-5 w-5" />
+                    </a>
                   </span>
-                  <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                    <Linkedin style={{ color: 'red' }} className="h-5 w-5" />
-                  </span>
-                  <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
-                    <Instagram style={{ color: 'red' }} className="h-5 w-5" />
+                  <span className="cursor-pointer rounded-full bg-white border border-white-200/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100 group-hover:opacity-70">
+                    <a href="" target="_blank">
+                      <Mastodon className="h-5 w-5" />
+                    </a>
                   </span>
                 </div>
               </div>
