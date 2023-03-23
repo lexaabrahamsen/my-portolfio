@@ -1,9 +1,9 @@
 // import { CodeIcon } from "@heroicons/react/solid";
-import React from "react";
+import React, { useState } from "react";
 import { projects } from "../data";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
-import { useState } from 'react'
+// import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -20,7 +20,7 @@ const navigation = [
 export default function Projects() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
-    <>
+    <React.Fragment>
 
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
@@ -115,6 +115,6 @@ export default function Projects() {
     </div>
       </div>
     </section>
-    </>
+    </React.Fragment>
   );
 }

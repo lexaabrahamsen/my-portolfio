@@ -4,77 +4,121 @@ import './App.css';
 import About from './Section/About';
 import Projects from './Section/Projects';
 // import { CodeIcon } from "@heroicons/react/solid";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
-import { CodeBracketIcon } from "@heroicons/react/24/outline";
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { CodeBracketIcon } from '@heroicons/react/24/outline';
+import { useState } from 'react';
+import { Dialog } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Github } from '@styled-icons/bootstrap/Github';
+import { Linkedin } from '@styled-icons/bootstrap/Linkedin';
+import { Mastodon } from '@styled-icons/bootstrap/Mastodon';
+import { Instagram } from '@styled-icons/bootstrap/Instagram';
+
 
 const navigation = [
   { name: 'About', href: '#' },
   { name: 'Work', href: '#' },
+  { name: 'Experiments', href: '#' },
   { name: 'Contact', href: '#' },
-  { name: 'Resusme', href: '#' },
-]
+  { name: 'Resume', href: '#' },
+];
 
 function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
-    {/* web nav */}
-    <nav className="bg-slate-800 h-14">
-      {navigation.map((item) => (
-        <a key={item.name} href={item.href} className="text-white">{item.name}</a>
-      ))}
-    </nav>
-
-
-    <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-    <div className="flex lg:flex-1">
-      <a href="#" className="-m-1.5 p-1.5">
-        <span className="sr-only">Your Company</span>
-        <img
-          className="h-8 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-          alt=""
-        />
-      </a>
-    </div>
-    <div className="flex lg:hidden">
-      <button
-        type="button"
-        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-        onClick={() => setMobileMenuOpen(true)}
-      >
-        <span className="sr-only">Open main menu</span>
-        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-      </button>
-    </div>
-    <div className="hidden lg:flex lg:gap-x-12">
-      {navigation.map((item) => (
-        <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-          {item.name}
-        </a>
-      ))}
-    </div>
-    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-      <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-        Log in <span aria-hidden="true">&rarr;</span>
-      </a>
-    </div>
-  </nav>
-    <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
+      <header className="absolute inset-x-0 top-0 z-50">
+        <nav
+          className="flex items-center justify-between p-6 lg:px-8 bg-white sticky top-0"
+          aria-label="Global"
+        >
+          <div className="flex lg:flex-1">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Lexa Wong</span>
+              <div className="text-black uppercase font-sans text-xl font-extrabold tracking-normal decoration-solid">
+                Lexa Wong
+              </div>
+              <div className="font-sans uppercase">
+                Frontend Developer | UI Designer
+              </div>
+            </a>
+          </div>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(true)}
+            >
+              <span className="sr-only">Open main menu</span>
+              <Bars3Icon className="h-6 w-6 text black" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm font-semibold leading-6 text-black uppercase"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </nav>
+        <Dialog
+          as="div"
+          className="lg:hidden"
+          open={mobileMenuOpen}
+          onClose={setMobileMenuOpen}
+        >
+          <div className="fixed inset-0 z-50" />
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-blue px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-end">
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-white"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6">
+                  {navigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:line-through"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                <div className="py-6">Github LinkedIn Mastadon Instagram</div>
+                <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                  <span className="cursor-pointer rounded-full border border-white-500/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100 group-hover:opacity-70">
+                    <Github style={{ color: 'red' }} className="h-5 w-5" />
+                  </span>
+                  <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                    <Mastodon style={{ color: 'red' }} className="h-5 w-5" />
+                  </span>
+                  <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                    <Linkedin style={{ color: 'red' }} className="h-5 w-5" />
+                  </span>
+                  <span className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-blue-500 transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70">
+                    <Instagram style={{ color: 'red' }} className="h-5 w-5" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Dialog.Panel>
+        </Dialog>
+      </header>
       <About />
       <Projects />
-      <p className="text-3xl text-gray-700 font-bold mb-5">
-        Welcome!
-      </p>
-      <p className="text-gray-500 text-lg">
-        React and Tailwind CSS in action
-      </p>
-    </div>
     </>
   );
 }
