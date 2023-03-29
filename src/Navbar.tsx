@@ -89,7 +89,7 @@ function Navbar() {
                   ))}
                 </div>
                 <div className="group mt-10 inline-flex flex-wrap items-center gap-3">
-                  <a href="https://github.com/lexaabrahamsen" target="_blank">
+                  <a href="https://github.com/lexaabrahamsen" target="_blank" rel="noreferrer">
                     <span className="cursor-pointer rounded-full text-white p-3 hover:bg-neutral-900">
                       <Github className="h-5 w-5" />
                     </span>
@@ -98,6 +98,7 @@ function Navbar() {
                     <a
                       href="https://www.linkedin.com/in/lexa-abrahamsen/"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <Linkedin className="h-5 w-5" />
                     </a>
@@ -106,12 +107,13 @@ function Navbar() {
                     <a
                       href="https://www.instagram.com/lexaraea/?hl=en"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <Instagram className="h-5 w-5" />
                     </a>
                   </span>
                   <span className="cursor-pointer rounded-full bg-white border border-white-200/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100">
-                    <a href="" target="_blank">
+                    <a href="" target="_blank" rel="noreferrer">
                       <Mastodon className="h-5 w-5" />
                     </a>
                   </span>
