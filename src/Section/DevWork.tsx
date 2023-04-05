@@ -1,33 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function DesignWork() {
+export default function DevWork() {
   return (
     <>
       <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 dark:bg-gray-950 dark:shadow-soft-dark-xl shadow-soft-xl rounded-2xl bg-clip-border">
         <div className="p-4 pb-0 mb-0 rounded-t-2xl text-center">
-          <h6 className="text-5xl mb-14 font-semibold text-black">Design work</h6>
-        </div>
-
-        <div className="xl:py-5 lg:py-5 md:py-5 sm:py-5 px-15 flex flex-wrap">
-          <div className="w-4/12 xl:w-1/6 lg:w-1/6 md:w-1/6 flex justify-center xl:pb-5 pb-2 pt-4 items-center">
-            <img src="https://cdn.tuk.dev/assets/adidas-dark.png" />
-          </div>
-          <div className="w-4/12 xl:w-1/6 lg:w-1/6 md:w-1/6 flex justify-center xl:pb-5 pb-2 pt-4 items-center">
-            <img src="https://cdn.tuk.dev/assets/channel-dark.png" />
-          </div>
-          <div className="w-4/12 xl:w-1/6 lg:w-1/6 md:w-1/6 flex justify-center xl:pb-5 pb-2 pt-4 items-center">
-            <img src="https://cdn.tuk.dev/assets/nike-dark.png" />
-          </div>
-          <div className="w-4/12 xl:w-1/6 lg:w-1/6 md:w-1/6 flex justify-center xl:pb-5 pb-2 pt-4 items-center">
-            <img src="https://cdn.tuk.dev/assets/toyota-dark.png" />
-          </div>
-          <div className="w-4/12 xl:w-1/6 lg:w-1/6 md:w-1/6 flex justify-center xl:pb-5 pb-2 pt-4 items-center">
-            <img src="https://cdn.tuk.dev/assets/gs1-dark.png" />
-          </div>
-          <div className="w-4/12 xl:w-1/6 lg:w-1/6 md:w-1/6 flex justify-center xl:pb-5 pb-2 pt-4 items-center">
-            <img src="https://cdn.tuk.dev/assets/berry-dark.png" />
-          </div>
+          <h6 className="text-5xl mb-14 font-semibold text-black">Dev work</h6>
         </div>
 
         <div className="flex-auto p-4">

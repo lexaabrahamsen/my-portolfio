@@ -9,6 +9,7 @@ import Footer from './Section/Footer';
 import Extra from './Section/Extra';
 import DesignWork from './Section/DesignWork';
 import DesignWorkContentPage from './Section/DesignWorkContentPage';
+import DevWork from './Section/DevWork';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='/design-work' element={<DesignWork />} />
+          <Route path='/dev-work' element={<DevWork />} />
           <Route path='/about' element={<About />} />
           <Route path='/extra' element={<Extra />} />
           <Route path='/header' element={<Header />} />

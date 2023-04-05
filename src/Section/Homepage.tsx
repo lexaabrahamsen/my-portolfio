@@ -1,5 +1,6 @@
 import React from 'react';
 import DesignWork from './DesignWork';
+import DevWork from './DevWork';
 import Header from './Header';
 
 export default function Homepage() {
@@ -13,6 +14,7 @@ export default function Homepage() {
 
         </div> */}
       <Header />
+      <DevWork />
       <DesignWork />
     </>
   );
