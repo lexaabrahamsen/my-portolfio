@@ -42,7 +42,7 @@ export default function DevWork() {
                         View Project
                       </button>
                       <Link
-                        to="/project-1"
+                        to="/humanityco"
                         className="bg-blue-500 py-2 px-8 uppercase"
                       >
                         View project

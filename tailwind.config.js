@@ -5,7 +5,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: ['Montserrat', "sans-serif"]
+      display: ['Montserrat', "sans-serif"],
+      body: ["Libre Bodoni", "serif"],
+      archivo: ['Archivo Black', "sans-serif"],
     },
     extend: {},
   },

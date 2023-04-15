@@ -30,6 +30,9 @@ function Navbar() {
               <div className="text-black uppercase font-sans text-xl font-extrabold tracking-normal decoration-solid">
                 Lexa Wong
               </div>
+              <div className="text-black uppercase font-body text-xl font-extrabold tracking-normal decoration-solid">
+                Lexa Wong
+              </div>
             </a>
           </div>
           <button></button>

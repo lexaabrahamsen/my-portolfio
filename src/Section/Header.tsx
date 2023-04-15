@@ -10,6 +10,10 @@ export default function Header() {
         Frontend <br />
         developer
       </h1>
+      <h1 className="font-body text-7xl mb-10  font-black text-black">
+        Frontend <br />
+        developer
+      </h1>
       <p className="mb-8 leading-relaxed">
         Currently working at Take Command Health helping to make health care<br />
         more look at how take command words it
