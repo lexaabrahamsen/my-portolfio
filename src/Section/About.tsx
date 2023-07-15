@@ -10,10 +10,14 @@ export default function About() {
             <br className="hidden lg:inline-block" />I love to build amazing
             apps.
           </h1>
-          <p className="mb-8 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-            laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-            Laborum, voluptas natus?
+          <p className="mb-5 font-open font-normal">
+            Before the transition to development, I spent the first 10 years of
+            my career as a UX/UI designer. I've worked with low fidelity
+            wireframes to high fidelity prototypes. I've worked with clients to
+            create brand identities and websites. I've worked with developers to
+            create applications. I've worked with marketing teams to create
+            campaigns. I've worked with product managers to create products.
+            I've worked with everyone to create experiences.
           </p>
           <div className="flex justify-center">
             <a

@@ -27,12 +27,12 @@ function Navbar() {
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Lexa Wong</span>
-              <div className="text-black uppercase font-sans text-xl font-extrabold tracking-normal decoration-solid">
+              <div className="uppercase font-archivo text-xl font-medium tracking-wide">
                 Lexa Wong
               </div>
-              <div className="text-black uppercase font-body text-xl font-extrabold tracking-normal decoration-solid">
+              {/* <div className="uppercase font-gloock text-xl font-semibold tracking-wide">
                 Lexa Wong
-              </div>
+              </div> */}
             </a>
           </div>
           <button></button>

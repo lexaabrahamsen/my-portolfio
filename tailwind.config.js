@@ -5,9 +5,13 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      display: ['Montserrat', "sans-serif"],
-      body: ["Libre Bodoni", "serif"],
-      archivo: ['Archivo Black', "sans-serif"],
+      display: ['Montserrat', 'sans-serif'],
+      body: ['Libre Bodoni', 'serif'],
+      archivo: ['Archivo Black', 'sans-serif'],
+      open: ['Open Sans', 'sans-serif'],
+      nun: ['Nunito Sans', 'sans-serif'],
+      outfit: ['Outfit', 'sans-serif'],
+      gloock: ['Gloock', 'serif'],
     },
     extend: {},
   },

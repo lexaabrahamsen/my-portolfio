@@ -11,7 +11,7 @@ export default function DesignWorkContentPage() {
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <h6 className="text-5xl mb-14 font-semibold text-black">Design work</h6>
           <h6 className="text-5xl mb-14 font-body text-black">Design work</h6>
-          <h6 className="text-5xl mb-10 font-archivo text-black">
+          <h6 className="text-5xl mb-10 font-display text-black">
             Design work
           </h6>
           <div className="w-full lg:w-5/12 flex flex-col justify-top">
