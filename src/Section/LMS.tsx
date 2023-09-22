@@ -9,6 +9,7 @@ export default function LMS() {
           <h1 className="font-gloock mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Learning Management System
           </h1>
+          <p>ICON OMNIGRAFFLE ICON SKETCH ICON</p>
           <p className="mt-6 text-xl leading-8 text-gray-700 font-outfit font-light">
             I was responsible for the User Interface for this design. The user
             experience was focused around providing a single framework with

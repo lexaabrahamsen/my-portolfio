@@ -27,7 +27,7 @@ function Navbar() {
           <div className="flex lg:flex-1">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Lexa Wong</span>
-              <div className="uppercase font-archivo text-xl font-medium tracking-wide">
+              <div className="uppercase font-gloock text-xl font-medium tracking-wide">
                 Lexa Wong
               </div>
               {/* <div className="uppercase font-gloock text-xl font-semibold tracking-wide">
@@ -46,7 +46,7 @@ function Navbar() {
               <Bars3Icon className="h-6 w-6 text black" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12">
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12 font-outfit">
             {navigation.map((item) => (
               <a
                 key={item.name}
