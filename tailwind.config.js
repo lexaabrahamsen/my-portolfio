@@ -13,7 +13,11 @@ module.exports = {
       outfit: ['Outfit', 'sans-serif'],
       gloock: ['Gloock', 'serif'],
     },
-    extend: {},
+    // extend: {
+    //   backgroundImage: {
+    //     'cc-form-thumbnail': "url(../public/CreditCardFeature.jpg"
+    //   }
+    // },
   },
   plugins: [],
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import DesignWork from './DesignWork';
-import DevWork from './DevWork';
+import DevWork from './DevWork/DevWorkPage';
 import Header from './Header';
 
 export default function Homepage() {

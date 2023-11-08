@@ -5,13 +5,13 @@ export default function DesignWork() {
   return (
     <>
       <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 dark:bg-gray-950 dark:shadow-soft-dark-xl shadow-soft-xl rounded-2xl bg-clip-border">
-        <div className="p-4 pb-0 mb-0 rounded-t-2xl text-center">
+        <div className="p-4 pb-0 mb-0 rounded-t-2xl text-left">
           <h6 className="text-5xl mb-2 font-gloock mb-10 font-extrabold">
             Design Work
           </h6>
         </div>
 
-        <DesignWorkLogos />
+        {/* <DesignWorkLogos /> */}
 
         <div className="flex flex-wrap mx-3">
           <div className="w-full max-w-full px-3 mb-6 md:w-6/12 md:flex-none xl:mb-0 xl:w-4/12">

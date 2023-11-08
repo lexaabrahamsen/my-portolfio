@@ -8,7 +8,7 @@ import About from './Section/About';
 import Blueprint from './Section/Blueprint';
 import DesignWorkContentPageWip from './Section/DesignWorkContentPageWip';
 import DesignWork from './Section/DesignWork';
-import DevWork from './Section/DevWork';
+import DevWork from './Section/DevWork/DevWorkPage';
 import Extra from './Section/Extra';
 import Footer from './Section/Footer';
 import Header from './Section/Header';
@@ -19,8 +19,8 @@ import Willspace from './Section/Willspace';
 import WillspaceMarketing from './Section/WillspaceMarketing';
 import WebsiteWork from './Section/WebsiteWork';
 import LMS from './Section/LMS';
-import CreditCardForm from './Section/CreditCardForm';
-import PortfolioWebsite from './Section/PortfolioWebsite';
+import CreditCardForm from './Section/InteractiveCreditCardPage';
+// import PortfolioWebsite from './Section/DevWork/DevWork';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
           <Route path="/design-work" element={<DesignWork />} />
           <Route path="/dev-work" element={<DevWork />} />
           <Route path="/credit-card-form" element={<CreditCardForm />} />
-          <Route path="/portfolio-website" element={<PortfolioWebsite />} />
+          {/* <Route path="/portfolio-website" element={<PortfolioWebsite />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/extra" element={<Extra />} />
           <Route path="/header" element={<Header />} />
