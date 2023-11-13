@@ -2,44 +2,9 @@ import { Link } from 'react-router-dom';
 import TitleHeader from '../components/TitleHeader';
 import { useState } from 'react';
 
+import { projects } from './projectData';
+
 export default function DesignWork() {
-  const projects = [
-    {
-      id: 1,
-      title: 'Hu-manity.co',
-      description: 'Data Privacy application',
-      image: '../HumanitycoCover.jpg',
-      link: '/humanityco',
-    },
-    {
-      id: 2,
-      title: 'Willspace',
-      description: 'Fitness mobile application',
-      image: '../WillspaceCoverOption2.jpg',
-      link: '/willspace',
-    },
-    {
-      id: 3,
-      title: 'Website work',
-      description: 'Build websites that encapsulate their brand and business.',
-      image: '../WebsiteWorkCover.jpg',
-      link: '/website-work',
-    },
-    {
-      id: 4,
-      title: 'Blueprint',
-      description: 'Meetings and events application',
-      image: '../BlueprintCover.jpg',
-      link: '/blueprint',
-    },
-    {
-      id: 5,
-      title: 'Willspace',
-      description: 'Fitness and lifestyle',
-      image: '../WillspaceMarketingCover.jpg',
-      link: '/willspace-marketing',
-    },
-  ];
 
   const [show, setShow] = useState(false);
 
@@ -115,41 +80,7 @@ export default function DesignWork() {
             );
           })}
         </div>
-        <div
-          className="relative w-full flex gap-4 py-6 overflow-x-auto"
-          style={{ backgroundColor: 'yellow' }}
-        >
-          <a href="/credit-card-form" rel="noopener noreferrer">
-            <div>
-              <img
-                className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
-                src="https://source.unsplash.com/random/241x361/?1"
-                alt="Image 1"
-              />
-              <button>where</button>
-            </div>
-          </a>
-          <img
-            className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
-            src="https://source.unsplash.com/random/241x361/?2"
-            alt="Image 2"
-          />
-          <img
-            className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
-            src="https://source.unsplash.com/random/241x361/?3"
-            alt="Image 3"
-          />
-          <img
-            className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
-            src="https://source.unsplash.com/random/241x361/?4"
-            alt="Image 4"
-          />
-          <img
-            className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
-            src="https://source.unsplash.com/random/241x361/?5"
-            alt="Image 5"
-          />
-        </div>
+       
         <div className="flex flex-wrap mx-3">
           <div className="w-full max-w-full px-3 mb-6 md:w-6/12 md:flex-none xl:mb-0 xl:w-4/12">
             <div className="my-4">
