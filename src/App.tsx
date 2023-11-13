@@ -20,6 +20,7 @@ import WillspaceMarketing from './Section/WillspaceMarketing';
 import WebsiteWork from './Section/WebsiteWork';
 import LMS from './Section/LMS';
 import CreditCardForm from './Section/InteractiveCreditCardPage';
+import Contact from './Section/Contact';
 // import PortfolioWebsite from './Section/DevWork/DevWork';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route path="/header" element={<Header />} />
           <Route path="/" element={<Homepage />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/extra" element={<Extra />} />
 

@@ -29,12 +29,12 @@ const DevWorkPage = () => {
             className="image-container rounded-lg"
             onMouseOver={showOverlay}
             onMouseLeave={hideOverlay}
-          >
+            >
             <a
               rel="noopener noreferrer"
               href="/credit-card-form"
               className="font-medium font-gloock text-md hover:underline dark:text-gray-100"
-            >
+              >
               <img
                 className="w-full rounded-lg"
                 src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"

@@ -13,27 +13,6 @@ export default function DesignWork() {
       style={{ paddingLeft: '2%', paddingRight: '2%', paddingBottom: '2%' }}
     >
       <TitleHeader title="Design Work" />
-      {/* option 1 */}
-      <div className="carousel carousel-end rounded-box">
-        {projects.map((project) => {
-          return (
-            <div className="carousel-item">
-              <a
-                rel="noopener noreferrer"
-                href={project.link}
-                className="font-medium font-gloock text-md hover:underline dark:text-gray-100"
-              >
-                <img
-                  className="h-96 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
-                  src={project.image}
-                  alt={project.title}
-                />
-              </a>
-            </div>
-          );
-        })}
-      </div>
-      {/* option 2 */}
       <div className="relative flex items-center justify-center w-full dark:text-gray-50">
         <button
           aria-label="Slide back"
@@ -57,17 +36,17 @@ export default function DesignWork() {
             ></path>
           </svg>
         </button>
-        <div className="flex items-center justify-start w-full h-full gap-3 py-4 mx-auto overflow-auto lg:gap-3">
+        <div className="carousel carousel-end rounded-box">
           {projects.map((project) => {
             return (
-              <div className="relative flex flex-shrink-0 w-full sm:w-auto">
+              <div className="carousel-item" style={{ margin: '2px' }}>
                 <a
                   rel="noopener noreferrer"
                   href={project.link}
                   className="font-medium font-gloock text-md hover:underline dark:text-gray-100"
                 >
                   <img
-                    className="object-cover object-center h-96 aspect-video dark:bg-gray-500 rounded-1xl bg-clip-border"
+                    className="h-96 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
                     src={project.image}
                     alt={project.title}
                   />
