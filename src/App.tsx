@@ -29,21 +29,29 @@ function App() {
         <Navbar />
         
         <Routes>
+          <Route path="/header" element={<Header />} />
           <Route path="/" element={<Homepage />} />
-          <Route path="/design-work" element={<DesignWork />} />
-          <Route path="/dev-work" element={<DevWork />} />
-          <Route path="/credit-card-form" element={<CreditCardForm />} />
-          {/* <Route path="/portfolio-website" element={<PortfolioWebsite />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/extra" element={<Extra />} />
-          <Route path="/header" element={<Header />} />
-          <Route path="/project-1" element={<DesignWorkContentPageWip />} />
+
+          {/* // Development Work */}
+          <Route path="/dev-work" element={<DevWork />} />
+          <Route path="/credit-card-form" element={<CreditCardForm />} />
+          <Route path="/project-2" element={<DesignWorkContentPageWip />} />
+          <Route path="/project-3" element={<DesignWorkContentPageWip />} />
+          <Route path="/project-4" element={<DesignWorkContentPageWip />} />
+
+          {/* // Design Work */}
+          <Route path="/design-work" element={<DesignWork />} />
+          {/* <Route path="/portfolio-website" element={<PortfolioWebsite />} /> */}
           <Route path="/humanityco" element={<Humanityco />} />
           <Route path="/willspace" element={<Willspace />} />
           <Route path="/blueprint" element={<Blueprint />} />
           <Route path="/willspace-marketing" element={<WillspaceMarketing />} />
           <Route path="/website-work" element={<WebsiteWork />} />
           <Route path="learning-management-system" element={<LMS />} />
+          
+          <Route path="/project-1" element={<DesignWorkContentPageWip />} />
         </Routes>
         <Footer />
       </Router>

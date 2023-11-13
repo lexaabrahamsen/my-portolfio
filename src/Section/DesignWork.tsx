@@ -1,18 +1,155 @@
 import { Link } from 'react-router-dom';
-import DesignWorkLogos from './DesignWorkLogos';
+import TitleHeader from '../components/TitleHeader';
+import { useState } from 'react';
 
 export default function DesignWork() {
+  const projects = [
+    {
+      id: 1,
+      title: 'Hu-manity.co',
+      description: 'Data Privacy application',
+      image: '../HumanitycoCover.jpg',
+      link: '/humanityco',
+    },
+    {
+      id: 2,
+      title: 'Willspace',
+      description: 'Fitness mobile application',
+      image: '../WillspaceCoverOption2.jpg',
+      link: '/willspace',
+    },
+    {
+      id: 3,
+      title: 'Website work',
+      description: 'Build websites that encapsulate their brand and business.',
+      image: '../WebsiteWorkCover.jpg',
+      link: '/website-work',
+    },
+    {
+      id: 4,
+      title: 'Blueprint',
+      description: 'Meetings and events application',
+      image: '../BlueprintCover.jpg',
+      link: '/blueprint',
+    },
+    {
+      id: 5,
+      title: 'Willspace',
+      description: 'Fitness and lifestyle',
+      image: '../WillspaceMarketingCover.jpg',
+      link: '/willspace-marketing',
+    },
+  ];
+
+  const [show, setShow] = useState(false);
+
+  const showOverlay = () => {
+    setShow(true);
+  };
+
+  const hideOverlay = () => {
+    setShow(false);
+  };
   return (
     <>
       <div className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 dark:bg-gray-950 dark:shadow-soft-dark-xl shadow-soft-xl rounded-2xl bg-clip-border">
-        <div className="p-4 pb-0 mb-0 rounded-t-2xl text-left">
-          <h6 className="text-5xl mb-2 font-gloock mb-10 font-extrabold">
-            Design Work
-          </h6>
+        <TitleHeader title="Design Work" />
+        {/* testing daisy */}
+        <div className="carousel carousel-end rounded-box">
+          {projects.map((project) => {
+            return (
+              <div
+                className="carousel-item gap-4"
+                onMouseOver={showOverlay}
+                onMouseLeave={hideOverlay}
+              >
+                <a
+                  rel="noopener noreferrer"
+                  href={project.link}
+                  className="font-medium font-gloock text-md hover:underline dark:text-gray-100"
+                >
+                  <img
+                    className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </a>
+              </div>
+            );
+          })}
         </div>
 
-        {/* <DesignWorkLogos /> */}
-
+        <div
+          className="relative w-full flex gap-4 py-6 overflow-x-auto"
+          style={{ backgroundColor: 'orange' }}
+        >
+          {projects.map((project) => {
+            return (
+              // <div className="relative w-full flex gap-4 py-6 overflow-x-auto" style={{ backgroundColor: 'red'}}>
+              <div
+                className="image-container rounded-lg"
+                onMouseOver={showOverlay}
+                onMouseLeave={hideOverlay}
+                style={{ backgroundColor: 'blue' }}
+              >
+                <a
+                  rel="noopener noreferrer"
+                  href="/credit-card-form"
+                  className="font-medium font-gloock text-md hover:underline dark:text-gray-100"
+                >
+                  <img
+                    className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </a>
+                {show && (
+                  <div className="overlay">
+                    {' '}
+                    <h2>{project.title}</h2>
+                    <p className="font-outfit">{project.description}</p>
+                  </div>
+                )}
+              </div>
+              // </div>
+            );
+          })}
+        </div>
+        <div
+          className="relative w-full flex gap-4 py-6 overflow-x-auto"
+          style={{ backgroundColor: 'yellow' }}
+        >
+          <a href="/credit-card-form" rel="noopener noreferrer">
+            <div>
+              <img
+                className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
+                src="https://source.unsplash.com/random/241x361/?1"
+                alt="Image 1"
+              />
+              <button>where</button>
+            </div>
+          </a>
+          <img
+            className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
+            src="https://source.unsplash.com/random/241x361/?2"
+            alt="Image 2"
+          />
+          <img
+            className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
+            src="https://source.unsplash.com/random/241x361/?3"
+            alt="Image 3"
+          />
+          <img
+            className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
+            src="https://source.unsplash.com/random/241x361/?4"
+            alt="Image 4"
+          />
+          <img
+            className="h-80 aspect-video rounded-sm object-cover object-center dark:bg-gray-500"
+            src="https://source.unsplash.com/random/241x361/?5"
+            alt="Image 5"
+          />
+        </div>
         <div className="flex flex-wrap mx-3">
           <div className="w-full max-w-full px-3 mb-6 md:w-6/12 md:flex-none xl:mb-0 xl:w-4/12">
             <div className="my-4">
@@ -90,7 +227,7 @@ export default function DesignWork() {
             <div className="my-4">
               <div className="relative flex flex-col min-w-0 break-words shadow-none dark:shadow-soft-dark-xl rounded-2xl bg-clip-border">
                 <div className="relative">
-                  <a className="block shadow-xl rounded-2xl">
+                  <a href="block shadow-xl rounded-2xl">
                     <img
                       src="../WillspaceCoverOption2.jpg"
                       alt="img-blur-shadow"

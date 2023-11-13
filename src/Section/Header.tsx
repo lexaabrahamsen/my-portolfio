@@ -3,10 +3,9 @@ import React from 'react';
 export default function Header() {
   return (
     // TODO: Possibly italizing Take Command text.
-    // TODO: Update Take command Link to open a new tab.
-    <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16" style={{ backgroundColor: 'yellow' }}>
-      <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8" style={{ backgroundColor: 'blue' }}>
-        <div className="max-w-4xl sm:mt-1 mt-80 space-y-8 text-center sm:text-left sm:ml-auto" style={{ backgroundColor: 'orange' }}>
+    <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
+      <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
+        <div className="max-w-4xl sm:mt-1 mt-80 space-y-8 text-center sm:text-left sm:ml-auto">
           <h2 className="font-outfit font-bold sm:text-8xl leading-8">
             Front-end developer currently juggling health insurance at{' '}
             <a
