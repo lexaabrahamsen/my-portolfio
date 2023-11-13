@@ -18,13 +18,6 @@ const DevWorkPage = () => {
   return (
     <>
       <div className="relative flex flex-col min-w-0 mb-6 break-words border-0">
-        {/* <div className="relative z-10 max-w-screen-xl px-4 pb-20 pt-10 mx-auto sm:px-6 lg:px-8" style={{ backgroundColor: 'yellow' }}>
-          <div className="max-w-4xl sm:mt-1 mt-80 space-y-8 text-left sm:text-left sm:ml-auto">
-            <h6 className="text-5xl mb-2 font-gloock mb-10 font-extrabold">
-              Development Work
-            </h6>
-          </div>
-        </div> */}
         <TitleHeader title="Development Work" />
         
         <div

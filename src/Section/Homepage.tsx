@@ -13,9 +13,12 @@ export default function Homepage() {
           humanity
 
         </div> */}
+        <div style={{ backgroundColor: 'white' }}>
+
       <Header />
       <DevWork />
       <DesignWork />
+        </div>
     </>
   );
 }
