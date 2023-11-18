@@ -17,7 +17,7 @@ const DevWorkPage = () => {
 
   return (
     <>
-      <div id="/development-work" className="relative flex flex-col min-w-0 mb-6 break-words border-0">
+      <div id="development-work" className="relative flex flex-col min-w-0 mb-6 break-words border-0">
         <TitleHeader title="Development Work" />
         
         <div

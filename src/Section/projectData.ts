@@ -1,4 +1,4 @@
-export const projects = [
+export const designProjects = [
   {
     id: 1,
     title: 'Hu-manity.co',
@@ -34,4 +34,7 @@ export const projects = [
     image: '../WillspaceMarketingCover.jpg',
     link: '/willspace-marketing',
   },
+];
+
+export const developmentProjects = [
 ];

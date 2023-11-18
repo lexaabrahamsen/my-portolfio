@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // Components
 import TitleHeader from '../components/TitleHeader';
 // Data
-import { projects } from './projectData';
+import { designProjects } from './projectData';
 
 export default function DesignWork() {
   return (
@@ -37,7 +37,7 @@ export default function DesignWork() {
           </svg>
         </button>
         <div className="carousel carousel-end rounded-box">
-          {projects.map((project) => {
+          {designProjects.map((project) => {
             return (
               <div className="carousel-item" style={{ margin: '2px' }}>
                 <a

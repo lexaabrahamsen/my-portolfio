@@ -28,12 +28,12 @@ function App() {
     <>
       <Router>
         <Navbar />
-        
+
         <Routes>
-          <Route path="/header" element={<Header />} />
+          <Route path="/header" element={<Header id="header" />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
+          {/* <Route path="/about" element={<About />} /> */}
           <Route path="/extra" element={<Extra />} />
 
           {/* // Development Work */}
@@ -52,11 +52,12 @@ function App() {
           <Route path="/willspace-marketing" element={<WillspaceMarketing />} />
           <Route path="/website-work" element={<WebsiteWork />} />
           <Route path="learning-management-system" element={<LMS />} />
-          
+
           <Route path="/project-1" element={<DesignWorkContentPageWip />} />
         </Routes>
-        <Footer />
       </Router>
+
+      <Footer />
     </>
   );
 }
