@@ -6,7 +6,7 @@ import { loadSlim } from 'tsparticles-slim';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './Section/About';
 import Blueprint from './Section/Blueprint';
-import DesignWorkContentPageWip from './Section/DesignWorkContentPageWip';
+import DesignWorkContentPageWip from './Section/Portoflio';
 import DesignWork from './Section/DesignWork';
 import DevWork from './Section/DevWork/DevWorkPage';
 import Extra from './Section/Extra';
@@ -21,6 +21,7 @@ import WebsiteWork from './Section/WebsiteWork';
 import LMS from './Section/LMS';
 import CreditCardForm from './Section/InteractiveCreditCardPage';
 import Contact from './Section/Contact';
+import Portfolio from './Section/Portoflio';
 // import PortfolioWebsite from './Section/DevWork/DevWork';
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
           <Route path="/credit-card-form" element={<CreditCardForm />} />
           <Route path="/project-2" element={<DesignWorkContentPageWip />} />
           <Route path="/project-3" element={<DesignWorkContentPageWip />} />
-          <Route path="/project-4" element={<DesignWorkContentPageWip />} />
+          <Route path="/portfolio" element={<Portfolio />} />
 
           {/* // Design Work */}
           <Route path="/design-work" element={<DesignWork />} />

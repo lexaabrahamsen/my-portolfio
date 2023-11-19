@@ -115,7 +115,7 @@ const DevWorkPage = () => {
           >
             <a
               rel="noopener noreferrer"
-              href="/project-4"
+              href="/portfolio"
               className="font-medium font-gloock text-md hover:underline dark:text-gray-100"
             >
               <img
@@ -126,9 +126,9 @@ const DevWorkPage = () => {
               {show && (
                 <div className="overlay">
                   {' '}
-                  <h2>Fourth Project</h2>
+                  <h2>Portfolio Website</h2>
                   <p className="font-outfit">
-                    Another project. Maybe rust, maybe not. Who knows?!
+                    This website was built with React, TypeScript, and Tailwind CSS.
                   </p>
                 </div>
               )}
