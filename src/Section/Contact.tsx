@@ -18,6 +18,7 @@ export default function Contact() {
           <h2 className="font-outfit font-bold sm:text-5xl leading-8">
             Get in touch.
           </h2>
+
           <div style={{ marginTop: '25px' }}>
             <h1
               className="font-outfit uppercase"

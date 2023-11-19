@@ -3,16 +3,15 @@ export default function Blueprint() {
     <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 mt-12">
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="w-full lg:w-5/12 flex flex-col justify-top">
-          <p className="text-base font-semibold leading-7 text-indigo-600">
-            WEBSITE
-          </p>
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-9xl font-gloock font-bold tracking-tight text-gray-900 sm:text-4xl">
             Blueprint
-          </h1>
-          <h1 className="mt-2 text-3xl font-body tracking-tight text-gray-900 sm:text-4xl">
-            MEETINGS & EVENTS APP
-          </h1>
-          <p className="mt-6 text-xl leading-8 text-gray-700">
+          </p>
+          <div style={{ paddingTop: '15px' }}>
+            <p className="text-base font-outfit font-light leading-7 uppercase">
+              Meeting and Event Application
+            </p>
+          </div>
+          <p className="mt-6 text-xl leading-8 text-gray-700 font-outfit font-light">
             Apogy Events, one app for all events. Meeting and event application
             that enhances attendee engagement. As the UI/UX Designer I focused
             on the experience for the user in attendance. My role was to create

@@ -8,7 +8,7 @@ import { designProjects } from './projectData';
 export default function DesignWork() {
   return (
     <div
-      id="/design-work"
+      id="design-work"
       className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
       style={{ paddingLeft: '2%', paddingRight: '2%', paddingBottom: '2%' }}
     >

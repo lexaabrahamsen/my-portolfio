@@ -5,7 +5,7 @@ interface HeaderProps {
   id: string;
 }
 
-  export default function Header({ id }: HeaderProps) {
+export default function Header({ id }: HeaderProps) {
   return (
     <aside className="relative overflow-hidden text-black rounded-lg" id="header">
       <div className="relative z-10 max-w-screen-xl px-4 pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">

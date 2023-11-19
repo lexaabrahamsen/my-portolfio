@@ -33,7 +33,7 @@ function App() {
           <Route path="/header" element={<Header id="header" />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<About />} />
           <Route path="/extra" element={<Extra />} />
 
           {/* // Development Work */}

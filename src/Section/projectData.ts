@@ -1,6 +1,5 @@
 // TODO: Add dev project data here
-export const developmentProjects = [
-];
+export const developmentProjects = [];
 
 export const designProjects = [
   {
@@ -38,4 +37,36 @@ export const designProjects = [
     image: '../WillspaceMarketingCover.jpg',
     link: '/willspace-marketing',
   },
+];
+
+export const websiteProjects = [
+  {
+    id: 1,
+    title: 'Dola Media',
+    description:
+      'Dola Media is where story meets business objectives. The goal of the website was to connect talent, brand and story to help ensure the conversation never stops.',
+    image: '../DolaMedia1.png',
+    link: 'https://www.dolamedia.com/',
+  },
+  {
+    id: 2,
+    title: 'Gretna Green Designs',
+    description: 'Gretna Greeen enhances the interiors of a space or building to achieve a healthier and more aesthetically pleasing environment for the end user.',
+    image: '../GretnaGreen1.png',
+    link: 'https://www.gretnagreendesigns.com/interior-design',
+  },
+  {
+    id: 3,
+    title: 'Harkmark, LLC',
+    description: 'Harkmark is a digital marketing agency that helps businesses grow their online presence.',
+    image: '../Harkmark1.png',
+    link: 'https://www.harkmark.com/',
+  },
+  {
+    id: 4,
+    title: 'WellNEST',
+    description: 'wellNEST is a members-only group integrating smart technology, personalized health guidance and world-class practitioners to access your highest self. wellNEST creates a data-rich picture with a customized action plan for each Member, connecting modalities from medicine to mediums.',
+    image: '../WellNest1.png',
+    link: 'https://www.wellnestnyc.com/',
+  }
 ];
