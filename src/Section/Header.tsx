@@ -27,7 +27,7 @@ interface HeaderProps {
           {/* <br /> */}
           {/* <br /> */}
           <div className="col-span-12 sm:col-span-3">
-            <h3 className="font-outfit text-lg font-regular" style={{ color: '#1f2937', fontStyle: 'italic' }}>Former UI/UX Designer for 10 years</h3>
+            <h3 className="font-gloock text-lg font-regular" style={{ color: '#1f2937', fontStyle: 'italic' }}>Former UI/UX Designer for 10 years</h3>
           </div>
         </div>
       </div>

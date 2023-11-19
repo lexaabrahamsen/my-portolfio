@@ -77,6 +77,7 @@ export default function DesignWork() {
             ></path>
           </svg>
         </button>
+        {/* TODO: Add indicator dots */}
       </div>
     </div>
   );

@@ -1,3 +1,7 @@
+// TODO: Add dev project data here
+export const developmentProjects = [
+];
+
 export const designProjects = [
   {
     id: 1,
@@ -34,7 +38,4 @@ export const designProjects = [
     image: '../WillspaceMarketingCover.jpg',
     link: '/willspace-marketing',
   },
-];
-
-export const developmentProjects = [
 ];
