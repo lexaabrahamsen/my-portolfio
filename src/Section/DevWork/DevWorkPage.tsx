@@ -17,9 +17,12 @@ const DevWorkPage = () => {
 
   return (
     <>
-      <div id="development-work" className="relative flex flex-col min-w-0 mb-6 break-words border-0">
+      <div
+        id="development-work"
+        className="relative flex flex-col min-w-0 mb-6 break-words border-0"
+      >
         <TitleHeader title="Development Work" />
-        
+
         <div
           className="columns-2 gap-5 space-y-5"
           style={{ paddingLeft: '15%', paddingRight: '15%' }}
@@ -29,22 +32,27 @@ const DevWorkPage = () => {
             className="image-container rounded-lg"
             onMouseOver={showOverlay}
             onMouseLeave={hideOverlay}
-            >
+          >
             <a
               rel="noopener noreferrer"
               href="/credit-card-form"
               className="font-medium font-gloock text-md hover:underline dark:text-gray-100"
-              >
+            >
               <img
                 className="w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                // src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                src="../CreditCardHomepageDark.jpg"
                 alt=""
               />
               {show && (
                 <div className="overlay">
-                  {' '}
-                  <h2>Interactive Credit Card</h2>
-                  <p className="font-outfit">
+                  <h2 style={{ backgroundColor: 'white' }}>
+                    Interactive Credit Card
+                  </h2>
+                  <p
+                    className="font-outfit"
+                    style={{ backgroundColor: 'white' }}
+                  >
                     React frontend, Material UI framework, and captivating
                     animations to elevate the user experience in credit card
                     input forms.
@@ -128,7 +136,8 @@ const DevWorkPage = () => {
                   {' '}
                   <h2>Portfolio Website</h2>
                   <p className="font-outfit">
-                    This website was built with React, TypeScript, and Tailwind CSS.
+                    This website was built with React, TypeScript, and Tailwind
+                    CSS.
                   </p>
                 </div>
               )}
