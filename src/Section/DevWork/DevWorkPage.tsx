@@ -46,13 +46,8 @@ const DevWorkPage = () => {
               />
               {show && (
                 <div className="overlay">
-                  <h2 style={{ backgroundColor: 'white' }}>
-                    Interactive Credit Card
-                  </h2>
-                  <p
-                    className="font-outfit"
-                    style={{ backgroundColor: 'white' }}
-                  >
+                  <h2>Interactive Credit Card</h2>
+                  <p className="font-outfit">
                     React frontend, Material UI framework, and captivating
                     animations to elevate the user experience in credit card
                     input forms.

@@ -22,14 +22,16 @@ import LMS from './Section/LMS';
 import CreditCardForm from './Section/InteractiveCreditCardPage';
 import Contact from './Section/Contact';
 import Portfolio from './Section/Portoflio';
+import { DarkModeProvider } from './DarkModeContext';
 // import PortfolioWebsite from './Section/DevWork/DevWork';
 
 function App() {
   return (
     <>
+    <DarkModeProvider>
       <Router>
         <Navbar />
-
+        {/* TODO: refer to seg to see how to organize route */}
         <Routes>
           <Route path="/header" element={<Header id="header" />} />
           <Route path="/" element={<Homepage />} />
@@ -59,6 +61,7 @@ function App() {
       </Router>
 
       <Footer />
+    </DarkModeProvider>
     </>
   );
 }

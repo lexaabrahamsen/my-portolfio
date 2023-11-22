@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Github } from '@styled-icons/bootstrap/Github';
@@ -6,20 +6,24 @@ import { Linkedin } from '@styled-icons/bootstrap/Linkedin';
 import { Mastodon } from '@styled-icons/bootstrap/Mastodon';
 import { Instagram } from '@styled-icons/bootstrap/Instagram';
 import { navigation } from './Section/navigation';
+import { DarkModeContext } from './DarkModeContext';
 
 function Navbar() {
+  const {darkMode} = useContext(DarkModeContext);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8 bg-white sticky top-0"
+        className="flex items-center justify-between p-6 lg:px-8 bg-white sticky top-0 dark:bg-slate-800"
         aria-label="Global"
+        style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}
+        // darkMode={toggleDarkMode}
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Lexa Wong</span>
-            <div className="uppercase font-gloock text-xl font-medium tracking-wide">
+            <div className="uppercase font-gloock text-xl font-medium tracking-wide" style={{ color: darkMode ? 'white' : '#1f2937'}}>
               Lexa Wong
             </div>
           </a>
@@ -41,6 +45,7 @@ function Navbar() {
               key={item.name}
               href={item.href}
               className="text-sm font-semibold leading-6 text-black uppercase"
+              style={{ color: !darkMode ? 'black' : 'white' }}
             >
               {item.name}
             </a>

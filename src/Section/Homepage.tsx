@@ -15,7 +15,7 @@ export default function Homepage() {
         </div> */}
         <div style={{ backgroundColor: 'white' }}>
 
-      <Header id="homepage/#header" />
+      <Header id="header" />
       <DevWork />
       <DesignWork />
         </div>
