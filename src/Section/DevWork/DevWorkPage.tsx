@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Cred } from 'styled-icons/crypto';
 import CreditCardForm from '../InteractiveCreditCardPage';
 import TitleHeader from '../../components/TitleHeader';
+import { DarkModeContext } from '../../DarkModeContext';
 
-const DevWorkPage = () => {
+interface DevWorkPageProps {}
+
+const DevWorkPage: React.FC<DevWorkPageProps> = ({ }) => {
   const [show, setShow] = useState(false);
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    throw new Error('useDarkMode must be used within a DarkModeProvider');
+  }
+
+  const { darkMode } = darkModeContext;
+  
 
   const showOverlay = () => {
     setShow(true);
@@ -20,6 +31,7 @@ const DevWorkPage = () => {
       <div
         id="development-work"
         className="relative flex flex-col min-w-0 mb-6 break-words border-0"
+        style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}
       >
         <TitleHeader title="Development Work" />
 

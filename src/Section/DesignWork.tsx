@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { FC, useContext } from 'react';
 import { Link } from 'react-router-dom';
 // Components
 import TitleHeader from '../components/TitleHeader';
 // Data
 import { designProjects } from './projectData';
+import { DarkModeContext } from '../DarkModeContext';
 
-export default function DesignWork() {
+interface DesignWorkProps {}
+
+const DesignWork: FC<DesignWorkProps> = () => {
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    throw new Error('useDarkMode must be used within a DarkModeProvider');
+  }
+
+  const { darkMode } = darkModeContext;
+
   return (
     <div
       id="design-work"
-      className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
-      style={{ paddingLeft: '2%', paddingRight: '2%', paddingBottom: '2%' }}
+      className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 shadow-soft-xl bg-clip-border"
+      style={{ paddingLeft: '2%', paddingRight: '2%', paddingBottom: '2%',
+       backgroundColor: darkMode ? '#1f2937' : 'white'
+       }}
     >
       <TitleHeader title="Design Work" />
       <div className="relative flex items-center justify-center w-full dark:text-gray-50">
@@ -82,3 +95,5 @@ export default function DesignWork() {
     </div>
   );
 }
+
+export default DesignWork;

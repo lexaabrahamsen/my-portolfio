@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import DesignWork from './DesignWork';
 import DevWork from './DevWork/DevWorkPage';
 import Header from './Header';
+import { DarkModeContext } from '../DarkModeContext';
 
-export default function Homepage() {
+interface HomepageProps {}
+
+const Homepage: React.FC<HomepageProps> = () => {
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    throw new Error('useDarkMode must be used within a DarkModeProvider');
+  }
+
+  const { darkMode } = darkModeContext;
+
   return (
     <>
       {/* <div className="flex items text-black">
@@ -13,7 +24,7 @@ export default function Homepage() {
           humanity
 
         </div> */}
-        <div style={{ backgroundColor: 'white' }}>
+        <div style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}>
 
       <Header id="header" />
       <DevWork />
@@ -22,3 +33,5 @@ export default function Homepage() {
     </>
   );
 }
+
+export default Homepage;
