@@ -8,8 +8,19 @@ import { Instagram } from '@styled-icons/bootstrap/Instagram';
 import { navigation } from './Section/navigation';
 import { DarkModeContext } from './DarkModeContext';
 
-function Navbar() {
-  const {darkMode} = useContext(DarkModeContext);
+interface NavbarProps {
+}
+
+const Navbar: React.FC<NavbarProps> = ({ }) => {
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    throw new Error('useDarkMode must be used within a DarkModeProvider');
+  }
+
+  // const {darkMode} = useContext(DarkModeContext);
+  const { darkMode } = darkModeContext;
+  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
