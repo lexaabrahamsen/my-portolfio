@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Github } from '@styled-icons/bootstrap/Github';
@@ -22,6 +22,8 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
   const { darkMode } = darkModeContext;
   
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  console.log('Dark mode updated:', darkMode);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">

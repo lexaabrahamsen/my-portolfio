@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DarkModeContext } from '../DarkModeContext';
+import exp from 'constants';
 
-export default function SocialLinks() {
+interface SocialLinksProps {
+}
+
+const SocialLinks: React.FC<SocialLinksProps> = () => {
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    throw new Error('useDarkMode must be used within a DarkModeProvider');
+  }
+
+  const { darkMode } = darkModeContext;
+
   return (
     <div className="flex justify-start space-x-3">
       <a
         href="https://github.com/lexaabrahamsen"
         rel="noopener noreferrer"
         target="_blank"
+        style={{ color: darkMode ? 'white' : '#1f2937' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
           fill="currentColor"
+
+
           className="bi bi-github"
           viewBox="0 0 16 16"
         >
@@ -23,6 +39,7 @@ export default function SocialLinks() {
         href="https://www.linkedin.com/in/lexa-abrahamsen/"
         rel="noopener noreferrer"
         target="_blank"
+        style={{ color: darkMode ? 'white' : '#1f2937' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,6 +56,7 @@ export default function SocialLinks() {
         href="https://www.instagram.com/lexaraea/"
         rel="noopener noreferrer"
         target="_blank"
+        style={{ color: darkMode ? 'white' : '#1f2937' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,6 +73,7 @@ export default function SocialLinks() {
         href="https://mastodon.social/@lexaraea"
         rel="noopener noreferrer"
         target="_blank"
+        style={{ color: darkMode ? 'white' : '#1f2937' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -70,3 +89,5 @@ export default function SocialLinks() {
     </div>
   );
 }
+
+export default SocialLinks;

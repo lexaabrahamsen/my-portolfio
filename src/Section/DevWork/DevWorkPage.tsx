@@ -30,7 +30,7 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({ }) => {
     <>
       <div
         id="development-work"
-        className="relative flex flex-col min-w-0 mb-6 break-words border-0"
+        className="relative flex flex-col min-w-0 break-words border-0"
         style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}
       >
         <TitleHeader title="Development Work" />

@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SocialLinks from './SocialLinks';
+import { DarkModeContext } from '../DarkModeContext';
 
-export default function Contact() {
+interface ContactProps {}
+
+const Contact: React.FC<ContactProps> = () => {
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    throw new Error('useDarkMode must be used within a DarkModeProvider');
+  }
+
+  const { darkMode } = darkModeContext;
+
   return (
     // style={{height: '92vh' }}
     <div
-      className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32"
+      className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32"
       style={{
         paddingTop: '10%',
         paddingLeft: '15%',
         paddingRight: '15%',
         minHeight: '100vh',
+        backgroundColor: darkMode ? '#1f2937' : 'white',
       }}
     >
       <div className="flex flex-col justify-between">
         <div>
-          <h2 className="font-outfit font-bold sm:text-5xl leading-8">
+          <h2 className="font-outfit font-bold sm:text-5xl leading-8" style={{ color: darkMode ? 'white' : '#1f2937' }}>
             Get in touch.
           </h2>
 
@@ -30,7 +42,7 @@ export default function Contact() {
             >
               About Me
             </h1>
-            <p className="font-outfit">
+            <p className="font-outfit" style={{ color: darkMode ? 'white' : '#1f2937' }}>
               Compulsive learner with a discerning eye. Thrive on challenges,
               motivated by making things that matter. Educational background in
               Economics and Psychology which helps frame my perspective on what
@@ -38,7 +50,7 @@ export default function Contact() {
             </p>
             <br />
             <br />
-            <p className="font-outfit">
+            <p className="font-outfit" style={{ color: darkMode ? 'white' : '#1f2937' }}>
               Frontend Developer and former UI designer. With a background in
               Economics and Psychology, I bring a unique perspective to crafting
               digital experiences. For the past decade, I've been weaving
@@ -56,7 +68,7 @@ export default function Contact() {
               style={{
                 fontWeight: 400,
                 paddingBottom: '8px',
-                color: 'lightgrey',
+                color: darkMode ? 'lightgrey' : '#1f2937',
               }}
             >
               Latest learnings
@@ -66,7 +78,7 @@ export default function Contact() {
                 className="flex items-center"
                 style={{ paddingBottom: '8px' }}
               >
-                <div style={{ paddingRight: '15px' }}>
+                <div style={{ paddingRight: '15px', color: darkMode ? 'white' : '#1f2937' }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -84,7 +96,7 @@ export default function Contact() {
                     href="https://www.linkedin.com/learning/software-architecture-domain-driven-design/what-is-ddd?autoSkip=true&resume=false&u=138906977"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ fontStyle: 'italic' }}
+                    style={{ fontStyle: 'italic', color: darkMode ? 'white' : '#1f2937' }}
                   >
                     AWS - Software Architecture: Domain-Driven Design
                   </a>
@@ -94,7 +106,7 @@ export default function Contact() {
                 className="flex items-center"
                 style={{ paddingBottom: '8px' }}
               >
-                <div style={{ paddingRight: '15px' }}>
+                <div style={{ paddingRight: '15px', color: darkMode ? 'white' : '#1f2937' }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -111,7 +123,7 @@ export default function Contact() {
                   href="https://aws.amazon.com/training/classroom/developing-on-aws/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontStyle: 'italic' }}
+                  style={{ fontStyle: 'italic', color: darkMode ? 'white' : '#1f2937' }}
                 >
                   AWS Developing on AWS Course
                 </a>
@@ -120,7 +132,7 @@ export default function Contact() {
                 className="flex items-center"
                 style={{ paddingBottom: '8px' }}
               >
-                <div style={{ paddingRight: '15px' }}>
+                <div style={{ paddingRight: '15px', color: darkMode ? 'white' : '#1f2937' }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -139,7 +151,7 @@ export default function Contact() {
                   href="https://www.coursera.org/learn/advanced-react?specialization=meta-front-end-developer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontStyle: 'italic' }}
+                  style={{ fontStyle: 'italic', color: darkMode ? 'white' : '#1f2937' }}
                 >
                   Coursera Advanced React
                 </a>
@@ -153,6 +165,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               target="_blank"
               className="underline font-gloock"
+              style={{ color: darkMode ? 'white' : '#1f2937' }}
             >
               lexaraea@gmail.com
             </a>
@@ -168,3 +181,5 @@ export default function Contact() {
     </div>
   );
 }
+
+export default Contact;

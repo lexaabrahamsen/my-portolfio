@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { navigation } from './navigation';
 import SocialLinks from './SocialLinks';
+import { DarkModeContext } from '../DarkModeContext';
 
-export default function Footer() {
+interface FooterProps {
+}
+
+const Footer: React.FC<FooterProps> = () => {
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    throw new Error('useDarkMode must be used within a DarkModeProvider');
+  }
+
+  const { darkMode } = darkModeContext;
+
   return (
-    <footer className="bg-white m-4">
-      <div className="w-full mx-auto max-w-screen-xl p-3 md:flex md:items-center md:justify-between">
-        <span className="font-outfit text-sm sm:text-center">
+    <footer style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}>
+      <div className="w-full mx-auto max-w-screen-xl p-3 md:flex md:items-center md:justify-between" style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}>
+        <span className="font-outfit text-sm sm:text-center" style={{ color: darkMode ? 'white' : '#1f2937' }}>
           © 2023. All Rights Reserved.
         </span>
         <SocialLinks />
@@ -17,6 +29,7 @@ export default function Footer() {
                 key={item.name}
                 href={item.href}
                 className="font-outfit"
+                style={{ color: darkMode ? 'white' : '#1f2937' }}
               >
                 {item.name}
               </a>
@@ -27,3 +40,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+export default Footer;

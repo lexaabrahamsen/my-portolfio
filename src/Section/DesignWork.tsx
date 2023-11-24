@@ -20,7 +20,7 @@ const DesignWork: FC<DesignWorkProps> = () => {
   return (
     <div
       id="design-work"
-      className="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 shadow-soft-xl bg-clip-border"
+      className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl bg-clip-border"
       style={{ paddingLeft: '2%', paddingRight: '2%', paddingBottom: '2%',
        backgroundColor: darkMode ? '#1f2937' : 'white'
        }}
