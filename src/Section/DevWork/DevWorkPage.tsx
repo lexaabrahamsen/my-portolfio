@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Cred } from 'styled-icons/crypto';
-import CreditCardForm from '../InteractiveCreditCardPage';
+import CreditCardForm from './InteractiveCreditCardPage';
 import TitleHeader from '../../components/TitleHeader';
 import { DarkModeContext } from '../../DarkModeContext';
 
@@ -135,7 +135,9 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({ }) => {
             >
               <img
                 className="w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                // src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
+                // TODO: change image to be on a lifestyle shot of the website
+                src="../PortfolioHomepageDark.jpg"
                 alt=""
               />
               {show && (

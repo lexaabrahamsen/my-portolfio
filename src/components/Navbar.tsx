@@ -5,22 +5,23 @@ import { Github } from '@styled-icons/bootstrap/Github';
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin';
 import { Mastodon } from '@styled-icons/bootstrap/Mastodon';
 import { Instagram } from '@styled-icons/bootstrap/Instagram';
-import { navigation } from './Section/navigation';
-import { DarkModeContext } from './DarkModeContext';
+import { navigationLinks } from '../Section/navigation';
 
-interface NavbarProps {
-}
+import { DarkModeContext } from '../DarkModeContext';
 
-const Navbar: React.FC<NavbarProps> = ({ }) => {
+import Switch from './Switch';
+
+interface NavbarProps {}
+
+const Navbar: React.FC<NavbarProps> = ({}) => {
   const darkModeContext = useContext(DarkModeContext);
 
   if (!darkModeContext) {
     throw new Error('useDarkMode must be used within a DarkModeProvider');
   }
 
-  // const {darkMode} = useContext(DarkModeContext);
   const { darkMode } = darkModeContext;
-  
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   console.log('Dark mode updated:', darkMode);
@@ -28,15 +29,19 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
-        className="flex items-center justify-between p-6 lg:px-8 bg-white sticky top-0 dark:bg-slate-800"
+        className={`flex items-center justify-between p-6 lg:px-8 sticky top-0 ${
+          darkMode ? 'light-font' : 'dark-font'
+        }`}
         aria-label="Global"
-        style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}
-        // darkMode={toggleDarkMode}
       >
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Lexa Wong</span>
-            <div className="uppercase font-gloock text-xl font-medium tracking-wide" style={{ color: darkMode ? 'white' : '#1f2937'}}>
+            <div
+              className={`uppercase font-gloock text-xl font-medium tracking-wide" ${
+                darkMode ? 'light-font' : 'dark-font'
+              }}`}
+            >
               Lexa Wong
             </div>
           </a>
@@ -45,7 +50,9 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className={`-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 ${
+              darkMode ? 'light-font' : 'dark-font'
+            }`}
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
@@ -53,16 +60,18 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
           </button>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-12 font-outfit">
-          {navigation.map((item) => (
+          {navigationLinks.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-black uppercase"
-              style={{ color: !darkMode ? 'black' : 'white' }}
+              className={`text-sm font-semibold leading-6 text-black uppercase" ${
+                darkMode ? 'light-font' : 'dark-font'
+              }`}
             >
               {item.name}
             </a>
           ))}
+          <Switch />
         </div>
       </nav>
       <Dialog
@@ -86,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
+                {navigationLinks.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
@@ -135,6 +144,6 @@ const Navbar: React.FC<NavbarProps> = ({ }) => {
       </Dialog>
     </header>
   );
-}
+};
 
 export default Navbar;

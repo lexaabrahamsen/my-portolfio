@@ -1,27 +1,25 @@
 import './App.css';
-import { useCallback } from 'react';
 import Particles from 'react-particles';
 import type { Container, Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import About from './Section/About';
-import Blueprint from './Section/Blueprint';
-import DesignWorkContentPageWip from './Section/Portoflio';
-import DesignWork from './Section/DesignWork';
+import Blueprint from './Section/DesignWork/Blueprint';
+import DesignWorkContentPageWip from './Section/DevWork/PortoflioPage';
+import DesignWork from './Section/DesignWork/DesignWork';
 import DevWork from './Section/DevWork/DevWorkPage';
 import Extra from './Section/Extra';
-import Footer from './Section/Footer';
+import Footer from './components/Footer';
 import Header from './Section/Header';
 import Homepage from './Section/Homepage';
-import Humanityco from './Section/Humanityco';
-import Navbar from './Navbar';
-import Willspace from './Section/Willspace';
-import WillspaceMarketing from './Section/WillspaceMarketing';
-import WebsiteWork from './Section/WebsiteWork';
-import LMS from './Section/LMS';
-import CreditCardForm from './Section/InteractiveCreditCardPage';
+import Humanityco from './Section/DesignWork/Humanityco';
+import Navbar from './components/Navbar';
+import Willspace from './Section/DesignWork/Willspace';
+import WillspaceMarketing from './Section/DesignWork/WillspaceMarketing';
+import WebsiteWork from './Section/DesignWork/WebsiteWork';
+import LMS from './Section/DesignWork/LMS';
+import CreditCardForm from './Section/DevWork/InteractiveCreditCardPage';
 import Contact from './Section/Contact';
-import Portfolio from './Section/Portoflio';
+import PortfolioPage from './Section/DevWork/PortoflioPage';
 import { DarkModeProvider } from './DarkModeContext';
 // import PortfolioWebsite from './Section/DevWork/DevWork';
 
@@ -36,7 +34,6 @@ function App() {
           <Route path="/header" element={<Header id="header" />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/about" element={<About />} />
           <Route path="/extra" element={<Extra />} />
 
           {/* // Development Work */}
@@ -44,7 +41,7 @@ function App() {
           <Route path="/credit-card-form" element={<CreditCardForm />} />
           <Route path="/project-2" element={<DesignWorkContentPageWip />} />
           <Route path="/project-3" element={<DesignWorkContentPageWip />} />
-          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
 
           {/* // Design Work */}
           <Route path="/design-work" element={<DesignWork />} />

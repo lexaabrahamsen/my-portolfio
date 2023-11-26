@@ -85,3 +85,27 @@
 .overlay p {
   font-size: 16px;
 }
+
+.light-background {
+  background-color: #fff;
+}
+
+.dark-background {
+  background-color: #1D232A;
+}
+
+.light-font {
+  color: #fff;
+}
+
+.dark-font {
+  color: #191E24;
+}
+
+.light-accent {
+  background-color: #2B323C;
+}
+
+.dark-accent {
+  background-color: #191E24;
+}

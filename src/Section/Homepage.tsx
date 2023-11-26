@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import DesignWork from './DesignWork';
+import DesignWork from './DesignWork/DesignWork';
 import DevWork from './DevWork/DevWorkPage';
 import Header from './Header';
 import { DarkModeContext } from '../DarkModeContext';
@@ -24,14 +24,13 @@ const Homepage: React.FC<HomepageProps> = () => {
           humanity
 
         </div> */}
-        <div style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}>
-
-      <Header id="header" />
-      <DevWork />
-      <DesignWork />
-        </div>
+      <div style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}>
+        <Header id="header" />
+        <DevWork />
+        <DesignWork />
+      </div>
     </>
   );
-}
+};
 
 export default Homepage;

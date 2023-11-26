@@ -1,10 +1,10 @@
 import React, { FC, useContext } from 'react';
 import { Link } from 'react-router-dom';
 // Components
-import TitleHeader from '../components/TitleHeader';
+import TitleHeader from '../../components/TitleHeader';
 // Data
-import { designProjects } from './projectData';
-import { DarkModeContext } from '../DarkModeContext';
+import { designProjects } from '../projectData';
+import { DarkModeContext } from '../../DarkModeContext';
 
 interface DesignWorkProps {}
 

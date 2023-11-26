@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+
 import { DarkModeContext } from '../DarkModeContext';
 
 interface SwitchProps {
@@ -11,7 +12,13 @@ const Switch: React.FC<SwitchProps> = ({  }) => {
     throw new Error('useDarkMode must be used within a DarkModeProvider');
   }
 
-  const { toggleDarkMode } = darkModeContext;
+  const { darkMode, toggleDarkMode } = darkModeContext;
+  const [isChecked, setIsChecked] = React.useState(darkMode);
+
+  useEffect(() => {
+    // Update the internal state of Switch when dark mode context changes
+    setIsChecked(darkMode);
+  }, [darkMode]);
 
   const handleSwitch = () => {
     toggleDarkMode();
@@ -24,6 +31,7 @@ const Switch: React.FC<SwitchProps> = ({  }) => {
         role="switch"
         id="flexSwitchCheck"
         onChange={handleSwitch}
+        checked={isChecked}
       />
   );
 }

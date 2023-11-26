@@ -1,4 +1,4 @@
-import { websiteProjects } from './projectData';
+import { websiteProjects } from '../projectData';
 
 export default function WebsiteWork() {
   return (
