@@ -1,8 +1,6 @@
 import React, { FC, useContext } from 'react';
-import { Link } from 'react-router-dom';
-// Components
+
 import TitleHeader from '../../components/TitleHeader';
-// Data
 import { designProjects } from '../projectData';
 import { DarkModeContext } from '../../DarkModeContext';
 
@@ -20,10 +18,9 @@ const DesignWork: FC<DesignWorkProps> = () => {
   return (
     <div
       id="design-work"
-      className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl bg-clip-border"
-      style={{ paddingLeft: '2%', paddingRight: '2%', paddingBottom: '2%',
-       backgroundColor: darkMode ? '#1f2937' : 'white'
-       }}
+      className={`relative flex flex-col min-w-0 break-words border-0 shadow-soft-xl bg-clip-border px-3 pb-3 ${
+        darkMode ? 'dark-background' : 'light-background'
+      }`}
     >
       <TitleHeader title="Design Work" />
       <div className="relative flex items-center justify-center w-full dark:text-gray-50">
@@ -52,7 +49,7 @@ const DesignWork: FC<DesignWorkProps> = () => {
         <div className="carousel carousel-end rounded-box">
           {designProjects.map((project) => {
             return (
-              <div className="carousel-item" style={{ margin: '2px' }}>
+              <div className="carousel-item m-0.5">
                 <a
                   rel="noopener noreferrer"
                   href={project.link}
@@ -94,6 +91,6 @@ const DesignWork: FC<DesignWorkProps> = () => {
       </div>
     </div>
   );
-}
+};
 
 export default DesignWork;

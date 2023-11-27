@@ -30,7 +30,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
         className={`flex items-center justify-between p-6 lg:px-8 sticky top-0 ${
-          darkMode ? 'light-font' : 'dark-font'
+          darkMode ? 'dark-background' : 'light-background'
         }`}
         aria-label="Global"
       >
@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             <div
               className={`uppercase font-gloock text-xl font-medium tracking-wide" ${
                 darkMode ? 'light-font' : 'dark-font'
-              }}`}
+              }`}
             >
               Lexa Wong
             </div>

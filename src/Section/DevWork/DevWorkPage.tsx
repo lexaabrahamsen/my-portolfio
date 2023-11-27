@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Cred } from 'styled-icons/crypto';
 import CreditCardForm from './InteractiveCreditCardPage';
 import TitleHeader from '../../components/TitleHeader';
@@ -7,16 +6,15 @@ import { DarkModeContext } from '../../DarkModeContext';
 
 interface DevWorkPageProps {}
 
-const DevWorkPage: React.FC<DevWorkPageProps> = ({ }) => {
+const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
   const [show, setShow] = useState(false);
   const darkModeContext = useContext(DarkModeContext);
 
   if (!darkModeContext) {
     throw new Error('useDarkMode must be used within a DarkModeProvider');
-  }
+  };
 
   const { darkMode } = darkModeContext;
-  
 
   const showOverlay = () => {
     setShow(true);
@@ -30,8 +28,9 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({ }) => {
     <>
       <div
         id="development-work"
-        className="relative flex flex-col min-w-0 break-words border-0"
-        style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}
+        className={`relative flex flex-col min-w-0 break-words border-0 ${
+          darkMode ? 'dark-background' : 'light-background'
+        }`}
       >
         <TitleHeader title="Development Work" />
 
@@ -52,7 +51,6 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({ }) => {
             >
               <img
                 className="w-full rounded-lg"
-                // src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
                 src="../CreditCardHomepageDark.jpg"
                 alt=""
               />
@@ -135,7 +133,6 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({ }) => {
             >
               <img
                 className="w-full rounded-lg"
-                // src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
                 // TODO: change image to be on a lifestyle shot of the website
                 src="../PortfolioHomepageDark.jpg"
                 alt=""

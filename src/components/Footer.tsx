@@ -5,8 +5,7 @@ import SocialLinks from './SocialLinks';
 
 import { DarkModeContext } from '../DarkModeContext';
 
-interface FooterProps {
-}
+interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
   const darkModeContext = useContext(DarkModeContext);
@@ -18,20 +17,27 @@ const Footer: React.FC<FooterProps> = () => {
   const { darkMode } = darkModeContext;
 
   return (
-    <footer style={{ backgroundColor: darkMode ? '#1f2937' : 'white', padding: '20px' }}>
-      <div className="w-full mx-auto max-w-screen-xl p-3 md:flex md:items-center md:justify-between" style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}>
-        <span className="font-outfit text-sm sm:text-center" style={{ color: darkMode ? 'white' : '#1f2937' }}>
+    <footer
+      className={`p-5 ${darkMode ? 'dark-background' : 'light-background'}`}
+    >
+      <div className="w-full mx-auto max-w-screen-xl p-3 md:flex md:items-center md:justify-between">
+        <span
+          className={`font-outfit text-sm sm:text-center ${
+            darkMode ? 'light-font' : 'dark-font'
+          }`}
+        >
           © 2023. All Rights Reserved.
         </span>
         <SocialLinks />
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
           {navigationLinks.map((item) => (
-            <li style={{ paddingLeft: '20px' }}>
+            <li className="px-5">
               <a
                 key={item.name}
                 href={item.href}
-                className="font-outfit"
-                style={{ color: darkMode ? 'white' : '#1f2937' }}
+                className={`font-outfit ${
+                  darkMode ? 'light-font' : 'dark-font'
+                }`}
               >
                 {item.name}
               </a>
@@ -41,6 +47,6 @@ const Footer: React.FC<FooterProps> = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

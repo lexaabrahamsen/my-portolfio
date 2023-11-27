@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({}) => {
   const { darkMode } = darkModeContext;
 
   return (
-    <aside className="relative overflow-hidden text-black rounded-lg ${darkMode ? darkBackground : lightBackground}">
+    <aside className={`relative overflow-hidden text-black rounded-lg ${darkMode ? 'dark-background' : 'light-background'}`}>
       <div className="relative z-10 max-w-screen-xl px-4 pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
         <div className="max-w-4xl sm:mt-1 mt-80 space-y-8 text-center sm:text-left sm:ml-auto">
           <h2
@@ -34,7 +34,6 @@ const Header: React.FC<HeaderProps> = ({}) => {
               Take Command
             </a>
           </h2>
-          <Switch />
           <br />
           <div className="col-span-12 sm:col-span-3">
             <h3

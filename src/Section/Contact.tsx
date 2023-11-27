@@ -14,35 +14,34 @@ const Contact: React.FC<ContactProps> = () => {
   const { darkMode } = darkModeContext;
 
   return (
-    // style={{height: '92vh' }}
     <div
-      className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32"
+      className={`grid grid-cols-1 gap-8 px-8 py-16 mx-auto md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 ${
+        darkMode ? 'dark-background' : 'light-background'
+      }`}
       style={{
         paddingTop: '10%',
         paddingLeft: '15%',
         paddingRight: '15%',
-        minHeight: '100vh',
-        backgroundColor: darkMode ? '#1f2937' : 'white',
+        minHeight: '93vh',
       }}
     >
       <div className="flex flex-col justify-between">
         <div>
-          <h2 className="font-outfit font-bold sm:text-5xl leading-8" style={{ color: darkMode ? 'white' : '#1f2937' }}>
+          <h2
+            className={`font-outfit font-bold sm:text-5xl leading-8 ${
+              darkMode ? 'light-font' : 'dark-font'
+            }`}
+          >
             Get in touch.
           </h2>
 
-          <div style={{ marginTop: '25px' }}>
-            <h1
-              className="font-outfit uppercase"
-              style={{
-                fontWeight: 500,
-                paddingBottom: '8px',
-                color: 'lightgrey',
-              }}
-            >
+          <div className="mt-6">
+            <h1 className="font-outfit uppercase font-medium pb-2 text-neutral-300">
               About Me
             </h1>
-            <p className="font-outfit" style={{ color: darkMode ? 'white' : '#1f2937' }}>
+            <p
+              className={`font-outfit ${darkMode ? 'light-font' : 'dark-font'}`}
+            >
               Compulsive learner with a discerning eye. Thrive on challenges,
               motivated by making things that matter. Educational background in
               Economics and Psychology which helps frame my perspective on what
@@ -50,7 +49,9 @@ const Contact: React.FC<ContactProps> = () => {
             </p>
             <br />
             <br />
-            <p className="font-outfit" style={{ color: darkMode ? 'white' : '#1f2937' }}>
+            <p
+              className={`font-outfit ${darkMode ? 'light-font' : 'dark-font'}`}
+            >
               Frontend Developer and former UI designer. With a background in
               Economics and Psychology, I bring a unique perspective to crafting
               digital experiences. For the past decade, I've been weaving
@@ -59,26 +60,17 @@ const Contact: React.FC<ContactProps> = () => {
               challenges and stay ahead of the curve, constantly evolving in the
               ever-changing tech landscape.
             </p>
-            {/* <br /> */}
             <br />
           </div>
-          <div style={{ marginTop: '25px' }}>
-            <h1
-              className="font-outfit uppercase"
-              style={{
-                fontWeight: 400,
-                paddingBottom: '8px',
-                color: darkMode ? 'lightgrey' : '#1f2937',
-              }}
-            >
+          <div className="mt-6">
+            <h1 className="font-outfit uppercase font-medium pb-2 text-neutral-300">
               Latest learnings
             </h1>
             <div className="">
-              <div
-                className="flex items-center"
-                style={{ paddingBottom: '8px' }}
-              >
-                <div style={{ paddingRight: '15px', color: darkMode ? 'white' : '#1f2937' }}>
+              <div className="flex items-center pb-2">
+                <div
+                  className={`pr-4 ${darkMode ? 'light-font' : 'dark-font'}`}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -96,17 +88,18 @@ const Contact: React.FC<ContactProps> = () => {
                     href="https://www.linkedin.com/learning/software-architecture-domain-driven-design/what-is-ddd?autoSkip=true&resume=false&u=138906977"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ fontStyle: 'italic', color: darkMode ? 'white' : '#1f2937' }}
+                    className={`font-outfit italic ${
+                      darkMode ? 'light-font' : 'dark-font'
+                    }`}
                   >
                     AWS - Software Architecture: Domain-Driven Design
                   </a>
                 </div>
               </div>
-              <div
-                className="flex items-center"
-                style={{ paddingBottom: '8px' }}
-              >
-                <div style={{ paddingRight: '15px', color: darkMode ? 'white' : '#1f2937' }}>
+              <div className="flex items-center pb-2">
+                <div
+                  className={`pr-4 ${darkMode ? 'light-font' : 'dark-font'}`}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -123,16 +116,19 @@ const Contact: React.FC<ContactProps> = () => {
                   href="https://aws.amazon.com/training/classroom/developing-on-aws/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontStyle: 'italic', color: darkMode ? 'white' : '#1f2937' }}
+                  className={`font-outfit italic ${
+                    darkMode ? 'light-font' : 'dark-font'
+                  }`}
                 >
                   AWS Developing on AWS Course
                 </a>
               </div>
-              <div
-                className="flex items-center"
-                style={{ paddingBottom: '8px' }}
-              >
-                <div style={{ paddingRight: '15px', color: darkMode ? 'white' : '#1f2937' }}>
+              <div className="flex items-center pb-2">
+                <div
+                  className={`pr-4 font-outfit ${
+                    darkMode ? 'light-font' : 'dark-font'
+                  }`}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -151,7 +147,9 @@ const Contact: React.FC<ContactProps> = () => {
                   href="https://www.coursera.org/learn/advanced-react?specialization=meta-front-end-developer"
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontStyle: 'italic', color: darkMode ? 'white' : '#1f2937' }}
+                  className={`font-outfit italic ${
+                    darkMode ? 'light-font' : 'dark-font'
+                  }`}
                 >
                   Coursera Advanced React
                 </a>
@@ -159,27 +157,28 @@ const Contact: React.FC<ContactProps> = () => {
             </div>
           </div>
 
-          <div style={{ marginTop: '25px' }}>
+          <div className="mt-6">
             <a
               href="mailTo:lexaraea@gmail.com"
               rel="noopener noreferrer"
               target="_blank"
-              className="underline font-gloock"
-              style={{ color: darkMode ? 'white' : '#1f2937' }}
+              className={`font-gloock underline ${
+                darkMode ? 'light-font' : 'dark-font'
+              }`}
             >
               lexaraea@gmail.com
             </a>
           </div>
-          <div style={{ marginTop: '25px' }}>
+          <div className="mt-6">
             <SocialLinks />
           </div>
         </div>
       </div>
-      <div className="" style={{ borderRadius: '20px', paddingBottom: '8px' }}>
+      <div className="py-2">
         <img className="w-full rounded-lg" src="../profile.jpg" alt="profile" />
       </div>
     </div>
   );
-}
+};
 
 export default Contact;
