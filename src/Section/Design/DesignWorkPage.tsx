@@ -1,10 +1,12 @@
 import React, { FC, useContext } from 'react';
 
 import TitleHeader from '../../components/TitleHeader';
-import { designProjects } from '../projectData';
+import { designProjects } from '../../projectData';
 import { DarkModeContext } from '../../DarkModeContext';
 
-interface DesignWorkProps {}
+interface DesignWorkProps {
+  id?: string;
+}
 
 const DesignWork: FC<DesignWorkProps> = () => {
   const darkModeContext = useContext(DarkModeContext);

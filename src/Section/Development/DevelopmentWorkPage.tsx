@@ -1,10 +1,12 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Cred } from 'styled-icons/crypto';
-import CreditCardForm from './InteractiveCreditCardPage';
+import CreditCardForm from './InteractiveCreditCardDetail';
 import TitleHeader from '../../components/TitleHeader';
 import { DarkModeContext } from '../../DarkModeContext';
 
-interface DevWorkPageProps {}
+interface DevWorkPageProps {
+  id?: string;
+}
 
 const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
   const [show, setShow] = useState(false);
@@ -15,6 +17,17 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
   };
 
   const { darkMode } = darkModeContext;
+
+  const devWorkRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if there is a hash in the URL
+    const hash = window.location.hash;
+    if (hash === '#development-work' && devWorkRef.current) {
+      // Scroll to the "Development Work" section
+      devWorkRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
 
   const showOverlay = () => {
     setShow(true);
@@ -27,17 +40,18 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
   return (
     <>
       <div
+        ref={devWorkRef}
         id="development-work"
         className={`relative flex flex-col min-w-0 break-words border-0 ${
           darkMode ? 'dark-background' : 'light-background'
         }`}
-      >
+        >
         <TitleHeader title="Development Work" />
 
         <div
           className="columns-2 gap-5 space-y-5"
           style={{ paddingLeft: '15%', paddingRight: '15%' }}
-        >
+          >
           {/* DEV PROJECT 1 */}
           <div
             className="image-container rounded-lg"

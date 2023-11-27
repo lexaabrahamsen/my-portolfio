@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { navigationLinks } from '../Section/navigation';
+import { navigationLinks } from './navigation';
 import SocialLinks from './SocialLinks';
 
 import { DarkModeContext } from '../DarkModeContext';

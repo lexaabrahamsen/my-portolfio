@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import DesignWork from './DesignWork/DesignWork';
-import DevWork from './DevWork/DevWorkPage';
-import Header from './Header';
+import DesignWork from './Design/DesignWorkPage';
+import DevWork from './Development/DevelopmentWorkPage';
+import Header from '../components/Header';
 import { DarkModeContext } from '../DarkModeContext';
 
 interface HomepageProps {}
@@ -16,20 +16,11 @@ const Homepage: React.FC<HomepageProps> = () => {
   const { darkMode } = darkModeContext;
 
   return (
-    <>
-      {/* <div className="flex items text-black">
-            Compulsive learner with a discerning eye. Thrive on challenges,
-          motivated by making things that matter. Educational background in
-          Economics and Psychology which helps frame my perspective on what moves
-          humanity
-
-        </div> */}
-      <div style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}>
-        <Header id="header" />
-        <DevWork />
-        <DesignWork />
-      </div>
-    </>
+    <div className={`${darkMode ? 'dark-background' : 'light-background'}`}>
+      <Header id="header" />
+      <DevWork id="development-work" />
+      <DesignWork id="design-work" />
+    </div>
   );
 };
 

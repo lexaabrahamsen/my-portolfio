@@ -5,7 +5,7 @@ import { Github } from '@styled-icons/bootstrap/Github';
 import { Linkedin } from '@styled-icons/bootstrap/Linkedin';
 import { Mastodon } from '@styled-icons/bootstrap/Mastodon';
 import { Instagram } from '@styled-icons/bootstrap/Instagram';
-import { navigationLinks } from '../Section/navigation';
+import { navigationLinks } from './navigation';
 
 import { DarkModeContext } from '../DarkModeContext';
 

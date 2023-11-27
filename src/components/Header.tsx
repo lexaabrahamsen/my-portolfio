@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { DarkModeContext } from '../DarkModeContext';
-import Switch from '../components/Switch';
+import Switch from './Switch';
 
 interface HeaderProps {
   id: string;
