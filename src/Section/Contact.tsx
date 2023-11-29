@@ -36,7 +36,7 @@ const Contact: React.FC<ContactProps> = () => {
           </h2>
 
           <div className="mt-6">
-            <h1 className="font-outfit uppercase font-medium pb-2 text-neutral-300">
+            <h1 className="font-outfit uppercase font-medium pb-2 text-neutral-400">
               About Me
             </h1>
             <p
@@ -63,7 +63,7 @@ const Contact: React.FC<ContactProps> = () => {
             <br />
           </div>
           <div className="mt-6">
-            <h1 className="font-outfit uppercase font-medium pb-2 text-neutral-300">
+            <h1 className="font-outfit uppercase font-medium pb-2 text-neutral-400">
               Latest learnings
             </h1>
             <div className="">

@@ -1,4 +1,4 @@
-import React, { FC, useContext } from 'react';
+import React, { FC, useContext, useEffect, useRef } from 'react';
 
 import TitleHeader from '../../components/TitleHeader';
 import { designProjects } from '../../projectData';
@@ -17,15 +17,29 @@ const DesignWork: FC<DesignWorkProps> = () => {
 
   const { darkMode } = darkModeContext;
 
+  const devWorkRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Check if there is a hash in the URL
+    const hash = window.location.hash;
+    if (hash === '#design-work' && devWorkRef.current) {
+      // Scroll to the "Development Work" section
+      devWorkRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <div
-      id="design-work"
       className={`relative flex flex-col min-w-0 break-words border-0 shadow-soft-xl bg-clip-border px-3 pb-3 ${
         darkMode ? 'dark-background' : 'light-background'
       }`}
     >
       <TitleHeader title="Design Work" />
-      <div className="relative flex items-center justify-center w-full dark:text-gray-50">
+      <div
+        className="relative flex items-center justify-center w-full dark:text-gray-50"
+        ref={devWorkRef}
+        id="design-work"
+      >
         <button
           aria-label="Slide back"
           type="button"
