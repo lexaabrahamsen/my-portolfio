@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = () => {
     <footer
       className={`p-5 ${darkMode ? 'dark-background' : 'light-background'}`}
     >
-      <div className="w-full mx-auto max-w-screen-xl p-3 md:flex md:items-center md:justify-between">
+      <div className="w-full mx-auto max-w-screen-xl p-3 md:flex sm:items-center md:justify-between">
         <span
           className={`font-outfit text-sm sm:text-center ${
             darkMode ? 'light-font' : 'dark-font'

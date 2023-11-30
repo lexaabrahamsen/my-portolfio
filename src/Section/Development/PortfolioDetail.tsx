@@ -50,7 +50,7 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
             reflection of my journey as a developer and a creative professional.
             <br />
             <br />
-            Implemented React with TypeScript to enhance code quality and
+            I wrote this project in React with TypeScript to enhance code quality and
             provide a statically-typed development experience. Utilized
             TypeScript's type-checking features to catch potential errors during
             development.
@@ -66,14 +66,14 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
             deployment features for an efficient development workflow.
             <br />
             <br />
-            Dark Mode Integration: Integrated a Dark Mode feature using the
+            Integrated a Dark Mode feature using the
             DarkModeProvider and useContext from React. Enables users to toggle
             between light and dark themes, enhancing accessibility and
             accommodating user preferences.
           </p>
-          <div className="flex items-center pb-2 mt-5">
+          <div className="flex items-center pb-2 mt-14">
             <div
-              className={`pr-4 font-outfit ${
+              className={`hover:underline pr-4 font-outfit ${
                 darkMode ? 'light-font' : 'dark-font'
               }`}
             >
@@ -101,8 +101,8 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
           </div>
         </div>
         <div className="w-full lg:w-8/12">
-          <img src="../Portfolio2.jpg" className="w-full rounded-lg mb-8" />
           <img src="../Portfolio1.jpg" className="w-full rounded-lg mb-8" />
+          <img src="../Portfolio2.jpg" className="w-full rounded-lg mb-8" />
         </div>
       </div>
     </div>

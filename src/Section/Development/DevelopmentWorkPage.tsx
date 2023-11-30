@@ -147,8 +147,6 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
             >
               <img
                 className="w-full rounded-lg"
-                // TODO: change image to be on a lifestyle shot of the website
-                // src="../PortfolioHomepageDark.jpg"
                 src="../PortfolioHomepage.jpg"
                 alt=""
               />
