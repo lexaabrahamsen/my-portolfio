@@ -4,7 +4,7 @@ import type { Container, Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Blueprint from './Section/Design/Blueprint';
-import DesignWorkContentPageWip from './Section/Development/PortfolioDetail';
+import DesignWorkContentPageWip from './Section/Development/PortfolioPage';
 import DesignWork from './Section/Design/DesignWorkPage';
 import DevWork from './Section/Development/DevelopmentWorkPage';
 import Extra from './Extra';
@@ -17,11 +17,13 @@ import Willspace from './Section/Design/Willspace';
 import WillspaceMarketing from './Section/Design/WillspaceMarketing';
 import WebsiteWork from './Section/Design/WebsiteWork';
 import LMS from './Section/Design/LMS';
-import CreditCardForm from './Section/Development/InteractiveCreditCardDetail';
+import CreditCardForm from './Section/Development/InteractiveCreditCardPage';
 import Contact from './Section/Contact';
-import PortfolioPage from './Section/Development/PortfolioDetail';
+import PortfolioPage from './Section/Development/PortfolioPage';
 import { DarkModeProvider } from './DarkModeContext';
 // import PortfolioWebsite from './Section/DevWork/DevWork';
+import MusicVisualizerPage from './Section/Development/MusicVizualizerPage';
+import InteractiveCreditCardPage from './Section/Development/InteractiveCreditCardPage';
 
 function App() {
   return (
@@ -38,8 +40,8 @@ function App() {
 
           {/* // Development Work */}
           <Route path="/dev-work" element={<DevWork />} />
-          <Route path="/credit-card-form" element={<CreditCardForm />} />
-          <Route path="/project-2" element={<DesignWorkContentPageWip />} />
+          <Route path="/credit-card-form" element={<InteractiveCreditCardPage />} />
+          <Route path="/music-visualizer" element={<MusicVisualizerPage />} />
           <Route path="/project-3" element={<DesignWorkContentPageWip />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
 

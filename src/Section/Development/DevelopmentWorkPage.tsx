@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Cred } from 'styled-icons/crypto';
-import CreditCardForm from './InteractiveCreditCardDetail';
+import CreditCardForm from './InteractiveCreditCardPage';
 import TitleHeader from '../../components/TitleHeader';
 import { DarkModeContext } from '../../DarkModeContext';
 
@@ -14,7 +14,7 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
 
   if (!darkModeContext) {
     throw new Error('useDarkMode must be used within a DarkModeProvider');
-  };
+  }
 
   const { darkMode } = darkModeContext;
 
@@ -45,14 +45,14 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
         className={`relative flex flex-col min-w-0 break-words border-0 ${
           darkMode ? 'dark-background' : 'light-background'
         }`}
-        >
+      >
         <TitleHeader title="Development Work" />
 
         <div
           className="columns-2 gap-5 space-y-5"
           style={{ paddingLeft: '15%', paddingRight: '15%' }}
-          >
-          {/* DEV PROJECT 1 */}
+        >
+          {/* DEV PROJECT 1 - Interactive Credit Card */}
           <div
             className="image-container rounded-lg"
             onMouseOver={showOverlay}
@@ -80,7 +80,7 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
               )}
             </a>
           </div>
-          {/* DEV PROJECT 2 */}
+          {/* DEV PROJECT 2 - Music Vizualizer */}
           <div
             onMouseOver={showOverlay}
             onMouseLeave={hideOverlay}
@@ -99,7 +99,7 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
               {show && (
                 <div className="overlay">
                   {' '}
-                  <h2>Second Project</h2>
+                  <h2>Virtual Gallery</h2>
                   <p className="font-outfit">
                     Another project. Maybe rust, maybe not. Who knows?!
                   </p>
@@ -115,7 +115,7 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
           >
             <a
               rel="noopener noreferrer"
-              href="/project-3"
+              href="/music-visualizer"
               className="font-medium font-gloock text-md hover:underline dark:text-gray-100"
             >
               <img
@@ -126,9 +126,11 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
               {show && (
                 <div className="overlay">
                   {' '}
-                  <h2>Third Project</h2>
+                  <h2>Music Visualizer</h2>
                   <p className="font-outfit">
-                    Another project. Maybe rust, maybe not. Who knows?!
+                    This project offers an interactive and engaging way to
+                    experience music through a simple yet effective visual
+                    representation.
                   </p>
                 </div>
               )}
