@@ -80,7 +80,7 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
               )}
             </a>
           </div>
-          {/* DEV PROJECT 2 - Music Vizualizer */}
+          {/* DEV PROJECT 2 */}
           <div
             onMouseOver={showOverlay}
             onMouseLeave={hideOverlay}
@@ -107,7 +107,7 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
               )}
             </a>
           </div>
-          {/* DEV PROJECT 3 */}
+          {/* DEV PROJECT 3 - Music Visualizer*/}
           <div
             onMouseOver={showOverlay}
             onMouseLeave={hideOverlay}
@@ -120,7 +120,8 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
             >
               <img
                 className="w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+                // src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
+                src="MusicVizualizerDevProjectThumbnail.jpg"
                 alt=""
               />
               {show && (
@@ -136,7 +137,7 @@ const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
               )}
             </a>
           </div>
-          {/* DEV PROJECT 4 */}
+          {/* DEV PROJECT 4 - Portfolio Website */}
           <div
             onMouseOver={showOverlay}
             onMouseLeave={hideOverlay}

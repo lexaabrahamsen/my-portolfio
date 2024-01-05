@@ -27,81 +27,113 @@ const MusicVizualizerPage: React.FC<MusicVizualizerPageProps> = () => {
           </p>
           <div style={{ paddingTop: '15px' }}>
             <p
-              className="text-base font-outfit font-light leading-7 uppercase"
+              className="text-base font-outfit font-regular leading-7 uppercase"
               style={{ color: darkMode ? 'white' : '#1f2937' }}
             >
-              Web Audio API / REACT / HTML5 Canvas
+              JavaScript / HTML5 Canvas
             </p>
           </div>
           <p
             className="mt-6 text-xl leading-8 text-gray-700 font-outfit font-light"
             style={{ color: darkMode ? 'white' : '#1f2937' }}
           >
-            This React project implements a simple music visualizer that allows
-            users to play and visualize an audio file. The visualizer uses the
-            Web Audio API to analyze the frequency data of the audio, creating a
-            dynamic and colorful display of vertical rectangles that represent
-            different frequencies in the song. Key Features: Play and Stop
-            Button: Users can toggle the playback of the audio using a
-            "Start/Stop" button. The button dynamically changes its label based
-            on the current playback state. Frequency Data Visualization: The
-            project utilizes the Web Audio API's AnalyserNode to capture
-            frequency data from the audio. This data is then translated into a
-            visual representation on an HTML5 canvas, where each vertical
-            rectangle corresponds to a different frequency. Dynamic Color
-            Mapping: The color of each rectangle is determined by the amplitude
-            of the corresponding frequency, creating a vibrant and dynamic
-            visual experience. Code Structure: The React component manages the
-            audio context, source, and analyser using useRef to persist values
-            across renders. The togglePlay function controls the playback of the
-            audio and initiates the visualization. The updateFrames function
-            continuously captures frequency data, updates state, and redraws the
-            visual representation on the canvas. Cleanup logic ensures that the
-            audio context and source are properly closed when the component is
-            unmounted. Usage: To use the visualizer, the user clicks the "Start"
-            button, initiating the playback of the audio and the dynamic
-            visualization. Clicking the button again stops the audio and
-            visualizer. This project offers an interactive and engaging way to
-            experience music through a simple yet effective visual
-            representation.
+            This React project is a music visualizer that lets users play and
+            visualize audio files using the Web Audio API. It dynamically
+            displays colorful rectangles representing different frequencies in
+            the song. <br />
+            Key Features:/Details/DeeperDive THis project showcases Frequency
+            Data Visualization by using Web Audio API's AnalyserNode for dynamic
+            frequency representation on an HTML5 canvas. Dynamic Color Mapping:
+            Color of rectangles reflects frequency amplitude for a vibrant
+            visual experience. Code Structure: Manages audio context, source,
+            and analyser with useRef. togglePlay controls playback and
+            visualization. updateFrames captures and updates frequency data.
+            Cleanup Logic: Ensures proper closure of audio context and source
+            when the component unmounts. Usage: Click "Start" for audio playback
+            and dynamic visualization; click again to stop.
           </p>
-          <a
-            href="https://elegant-trifle-0a151d.netlify.app/"
-            style={{ color: darkMode ? 'white' : '#1f2937' }}
-            className="inline-flex items-center px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-black text-black hover:border-black hover:bg-transparent hover:text-black hover:opacity-50 hover:shadow-none active:bg-black active:text-white active:hover:bg-transparent active:hover:text-black"
-          >
-            View demo
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              className="w-6 h-6 ml-2"
+          <div className="flex items-center pb-2 mt-6">
+            <div
+              className={`hover:underline pr-4 font-outfit ${
+                darkMode ? 'light-font' : 'dark-font'
+              }`}
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-              />
-            </svg>
-          </a>
+              <a
+                href="https://effortless-granita-939235.netlify.app/"
+                className={`font-gloock ${
+                  darkMode ? 'light-font' : 'dark-font'
+                }`}
+                style={{ textDecoration: 'underline', fontSize: '1.2rem' }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View demo
+              </a>
+            </div>
+            <div
+              className={`hover:underline pr-4 font-outfit ${
+                darkMode ? 'light-font' : 'dark-font'
+              }`}
+            >
+              {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="5 0 25 15"
+                fill="currentColor"
+                className="w-10 h-4"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg> */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                className="bi bi-arrow-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="flex items-center pb-2 mt-14">
+            <div
+              className={`hover:underline pr-4 font-outfit ${
+                darkMode ? 'light-font' : 'dark-font'
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                className="bi bi-github"
+                viewBox="0 0 16 16"
+              >
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </div>
+            <a
+              href="https://github.com/lexaabrahamsen/music-visualizer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`font-outfit ${darkMode ? 'light-font' : 'dark-font'}`}
+              // on hover underline link
+              style={{ textDecoration: 'underline', fontSize: '1.2rem' }}
+            >
+              GITHUB
+            </a>
+          </div>
         </div>
         <div className="w-full lg:w-8/12">
           <img
-            src="../MusicVizualizerDetail1.jpg"
-            className="w-full rounded-lg mb-8"
-          />
-          <img
-            src="../MusicVizualizerDetail2.jpg"
-            className="w-full rounded-lg mb-8"
-          />
-          <img
-            src="../MusicVizualizerDetail3.jpg"
-            className="w-full rounded-lg mb-8"
-          />
-          <img
-            src="../MusicVizualizerDetail4.jpg"
+            src="../MusicVizualizerDevProjectThumbnail.jpg"
             className="w-full rounded-lg mb-8"
           />
         </div>
