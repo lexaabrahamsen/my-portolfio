@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSketch, faWordpress } from '@fortawesome/free-brands-svg-icons';
+import React from 'react';
 
 export default function Humanityco() {
   return (

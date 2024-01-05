@@ -1,13 +1,9 @@
 import './App.css';
-import Particles from 'react-particles';
-import type { Container, Engine } from 'tsparticles-engine';
-import { loadSlim } from 'tsparticles-slim';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Blueprint from './Section/Design/Blueprint';
 import DesignWorkContentPageWip from './Section/Development/PortfolioPage';
 import DesignWork from './Section/Design/DesignWorkPage';
 import DevWork from './Section/Development/DevelopmentWorkPage';
-import Extra from './Extra';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Homepage from './Section/Homepage';
@@ -17,7 +13,6 @@ import Willspace from './Section/Design/Willspace';
 import WillspaceMarketing from './Section/Design/WillspaceMarketing';
 import WebsiteWork from './Section/Design/WebsiteWork';
 import LMS from './Section/Design/LMS';
-import CreditCardForm from './Section/Development/InteractiveCreditCardPage';
 import Contact from './Section/Contact';
 import PortfolioPage from './Section/Development/PortfolioPage';
 import { DarkModeProvider } from './DarkModeContext';
@@ -36,7 +31,6 @@ function App() {
           <Route path="/header" element={<Header id="header" />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/extra" element={<Extra />} />
 
           {/* // Development Work */}
           <Route path="/dev-work" element={<DevWork />} />
