@@ -5,7 +5,7 @@ import { DarkModeContext } from '../DarkModeContext';
 interface SwitchProps {
 }
 
-const Switch: React.FC<SwitchProps> = ({  }) => {
+const Switch: React.FC<SwitchProps> = () => {
   const darkModeContext = useContext(DarkModeContext);
 
   if (!darkModeContext) {

@@ -6,7 +6,7 @@ interface DevWorkPageProps {
   id?: string;
 }
 
-const DevWorkPage: React.FC<DevWorkPageProps> = ({}) => {
+const DevWorkPage: React.FC<DevWorkPageProps> = () => {
   const [show, setShow] = useState(false);
   const darkModeContext = useContext(DarkModeContext);
 
