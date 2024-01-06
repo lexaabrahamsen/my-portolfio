@@ -18,7 +18,7 @@ export default function WillspaceMarketing() {
           </p>
         </div>
         <div className="w-full lg:w-8/12">
-          <img src="../WSM1.jpeg" className="w-full rounded-lg mb-8" />
+          <img src="../WSM1.jpeg" className="w-full rounded-lg mb-8" alt="" />
         </div>
       </div>
     </div>

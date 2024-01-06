@@ -86,6 +86,7 @@ const InteractiveCreditCardPage: React.FC<
           <img
             src="../CreditCardFeatureDark.jpg"
             className="w-full rounded-lg mb-8"
+            alt=""
           />
         </div>
       </div>

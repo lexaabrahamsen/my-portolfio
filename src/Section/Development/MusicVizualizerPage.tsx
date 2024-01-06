@@ -135,6 +135,7 @@ const MusicVizualizerPage: React.FC<MusicVizualizerPageProps> = () => {
           <img
             src="../MusicVizualizerDevProjectThumbnail.jpg"
             className="w-full rounded-lg mb-8"
+            alt=""
           />
         </div>
       </div>

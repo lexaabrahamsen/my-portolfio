@@ -22,10 +22,10 @@ export default function LMS() {
           </p>
         </div>
         <div className="w-full lg:w-8/12">
-          <img src="../LMS1.png" className="w-full rounded-lg mb-8" />
-          <img src="../LMS2.png" className="w-full rounded-lg mb-8" />
-          <img src="../LMS3.png" className="w-full rounded-lg mb-8" />
-          <img src="../LMS4.png" className="w-full rounded-lg mb-8" />
+          <img src="../LMS1.png" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../LMS2.png" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../LMS3.png" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../LMS4.png" className="w-full rounded-lg mb-8" alt="" />
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ interface HeaderProps {
   id: string;
 }
 
-const Header: React.FC<HeaderProps> = ({}) => {
+const Header: React.FC<HeaderProps> = ({id}) => {
   const darkModeContext = useContext(DarkModeContext);
 
   if (!darkModeContext) {

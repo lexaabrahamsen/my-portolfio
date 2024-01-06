@@ -1,6 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Cred } from 'styled-icons/crypto';
-import CreditCardForm from './InteractiveCreditCardPage';
 import TitleHeader from '../../components/TitleHeader';
 import { DarkModeContext } from '../../DarkModeContext';
 

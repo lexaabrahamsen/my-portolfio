@@ -24,9 +24,9 @@ export default function Blueprint() {
           </p>
         </div>
         <div className="w-full lg:w-8/12">
-          <img src="../BP1.jpeg" className="w-full rounded-lg mb-8" />
-          <img src="../BP2.png" className="w-full rounded-lg mb-8" />
-          <img src="../BP3.png" className="w-full rounded-lg mb-8" />
+          <img src="../BP1.jpeg" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../BP2.png" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../BP3.png" className="w-full rounded-lg mb-8" alt="" />
         </div>
       </div>
     </div>

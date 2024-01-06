@@ -23,9 +23,9 @@ export default function Humanityco() {
           </p>
         </div>
         <div className="w-full lg:w-8/12">
-          <img src="../HU3.png" className="w-full rounded-lg mb-8" />
-          <img src="../HU2.png" className="w-full rounded-lg mb-8" />
-          <img src="../HU1.png" className="w-full rounded-lg mb-8" />
+          <img src="../HU3.png" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../HU2.png" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../HU1.png" className="w-full rounded-lg mb-8" alt="" />
         </div>
       </div>
     </div>

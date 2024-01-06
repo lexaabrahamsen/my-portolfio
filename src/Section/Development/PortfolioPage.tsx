@@ -1,8 +1,3 @@
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from '@heroicons/react/20/solid';
 import { useContext } from 'react';
 import { DarkModeContext } from '../../DarkModeContext';
 
@@ -101,8 +96,8 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
           </div>
         </div>
         <div className="w-full lg:w-8/12">
-          <img src="../Portfolio1.jpg" className="w-full rounded-lg mb-8" />
-          <img src="../Portfolio2.jpg" className="w-full rounded-lg mb-8" />
+          <img src="../Portfolio1.jpg" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../Portfolio2.jpg" className="w-full rounded-lg mb-8" alt="" />
         </div>
       </div>
     </div>

@@ -23,11 +23,11 @@ export default function Willspace() {
           </p>
         </div>
         <div className="w-full lg:w-8/12">
-          <img src="../WS1.png" className="w-full rounded-lg mb-8" />
-          <img src="../WS2.jpeg" className="w-full rounded-lg mb-8" />
-          <img src="../WS3.jpeg" className="w-full rounded-lg mb-8" />
-          <img src="../WS4.jpeg" className="w-full rounded-lg mb-8" />
-          <img src="../WS5.png" className="w-full rounded-lg mb-8" />
+          <img src="../WS1.png" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../WS2.jpeg" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../WS3.jpeg" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../WS4.jpeg" className="w-full rounded-lg mb-8" alt="" />
+          <img src="../WS5.png" className="w-full rounded-lg mb-8" alt="" />
         </div>
       </div>
     </div>
