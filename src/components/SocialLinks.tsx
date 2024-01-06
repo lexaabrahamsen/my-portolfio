@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { DarkModeContext } from '../DarkModeContext';
-import exp from 'constants';
 
 interface SocialLinksProps {
 }
