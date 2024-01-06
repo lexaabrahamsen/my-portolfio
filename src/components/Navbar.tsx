@@ -128,13 +128,13 @@ const Navbar: React.FC = () => {
                   </a>
                 </span>
                 <span className="cursor-pointer rounded-full bg-white border border-white-200/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100">
-                  <a href="" target="_blank" rel="noreferrer">
+                  <a href="/" target="_blank" rel="noreferrer">
                     <Mastodon className="h-5 w-5" />
                   </a>
                 </span>
               </div>
               <div>
-                <a href="" className="mt-7 text-white">
+                <a href="/" className="mt-7 text-white">
                   Resume
                 </a>
               </div>
