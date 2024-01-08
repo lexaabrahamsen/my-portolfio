@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
+import { Cred } from 'styled-icons/crypto';
 import TitleHeader from '../../components/TitleHeader';
 import { DarkModeContext } from '../../DarkModeContext';
 
-interface DevWorkPageProps {
+interface DevelopmentWorkSectionProps {
   id?: string;
 }
 
-const DevWorkPage: React.FC<DevWorkPageProps> = () => {
+const DevelopmentWorkSection: React.FC<DevelopmentWorkSectionProps> = ({}) => {
   const [show, setShow] = useState(false);
   const darkModeContext = useContext(DarkModeContext);
 
@@ -169,4 +170,4 @@ const DevWorkPage: React.FC<DevWorkPageProps> = () => {
   );
 };
 
-export default DevWorkPage;
+export default DevelopmentWorkSection;

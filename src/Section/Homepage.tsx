@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import DesignWork from './Design/DesignWorkPage';
-import DevWork from './Development/DevelopmentWorkPage';
+import DevelopmentWorkSection from './Development/DevelopmentWorkSection';
 import Header from '../components/Header';
 import { DarkModeContext } from '../DarkModeContext';
 
@@ -18,7 +18,7 @@ const Homepage: React.FC<HomepageProps> = () => {
   return (
     <div className={`${darkMode ? 'dark-background' : 'light-background'}`}>
       <Header id="header" />
-      <DevWork id="development-work" />
+      <DevelopmentWorkSection id="development-work" />
       <DesignWork id="design-work" />
     </div>
   );

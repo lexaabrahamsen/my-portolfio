@@ -4,11 +4,11 @@ import TitleHeader from '../../components/TitleHeader';
 import { designProjects } from '../../projectData';
 import { DarkModeContext } from '../../DarkModeContext';
 
-interface DesignWorkProps {
+interface DesignWorkSectionProps {
   id?: string;
 }
 
-const DesignWork: FC<DesignWorkProps> = () => {
+const DesignWorkSection: FC<DesignWorkSectionProps> = () => {
   const darkModeContext = useContext(DarkModeContext);
 
   if (!darkModeContext) {
@@ -109,4 +109,4 @@ const DesignWork: FC<DesignWorkProps> = () => {
   );
 };
 
-export default DesignWork;
+export default DesignWorkSection;

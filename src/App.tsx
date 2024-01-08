@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Blueprint from './Section/Design/Blueprint';
 import DesignWorkContentPageWip from './Section/Development/PortfolioPage';
 import DesignWork from './Section/Design/DesignWorkPage';
-import DevWork from './Section/Development/DevelopmentWorkPage';
+import DevelopmentWorkSection from './Section/Development/DevelopmentWorkSection';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Homepage from './Section/Homepage';
@@ -16,13 +16,11 @@ import LMS from './Section/Design/LMS';
 import Contact from './Section/Contact';
 import PortfolioPage from './Section/Development/PortfolioPage';
 import { DarkModeProvider } from './DarkModeContext';
-// import PortfolioWebsite from './Section/DevWork/DevWork';
 import MusicVisualizerPage from './Section/Development/MusicVizualizerPage';
 import InteractiveCreditCardPage from './Section/Development/InteractiveCreditCardPage';
 
 function App() {
   return (
-    <>
     <DarkModeProvider>
       <Router>
         <Navbar />
@@ -33,7 +31,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
 
           {/* // Development Work */}
-          <Route path="/dev-work" element={<DevWork />} />
+          <Route path="/development-work" element={<DevelopmentWorkSection />} />
           <Route path="/credit-card-form" element={<InteractiveCreditCardPage />} />
           <Route path="/music-visualizer" element={<MusicVisualizerPage />} />
           <Route path="/project-3" element={<DesignWorkContentPageWip />} />
@@ -55,7 +53,6 @@ function App() {
 
       <Footer />
     </DarkModeProvider>
-    </>
   );
 }
 

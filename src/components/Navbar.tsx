@@ -24,11 +24,10 @@ const Navbar: React.FC = () => {
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  console.log('Dark mode updated:', darkMode);
-
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
+      // style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}
         className={`flex items-center justify-between p-6 lg:px-8 sticky top-0 ${
           darkMode ? 'dark-background' : 'light-background'
         }`}

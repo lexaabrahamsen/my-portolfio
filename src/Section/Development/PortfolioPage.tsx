@@ -66,7 +66,7 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
             between light and dark themes, enhancing accessibility and
             accommodating user preferences.
           </p>
-          <div className="flex items-center pb-2 mt-14">
+          <div className="flex items-center pb-2 mt-6">
             <div
               className={`hover:underline pr-4 font-outfit ${
                 darkMode ? 'light-font' : 'dark-font'
@@ -84,11 +84,10 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
               </svg>
             </div>
             <a
-              href="https://github.com/lexaabrahamsen/my-portolfio"
+              href="https://github.com/lexaabrahamsen/my-portfolio"
               target="_blank"
               rel="noopener noreferrer"
               className={`font-outfit ${darkMode ? 'light-font' : 'dark-font'}`}
-              // on hover underline link
               style={{ textDecoration: 'underline', fontSize: '1.2rem' }}
             >
               GITHUB

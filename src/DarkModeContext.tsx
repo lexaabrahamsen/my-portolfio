@@ -17,7 +17,6 @@ const DarkModeProvider: FC<DarkModeProviderProps> = ({ children }) => {
   const [darkMode, setDarkMode] = useState(initialDarkMode);
 
   useEffect(() => {
-    console.log('Dark mode updated:', darkMode);
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
     setDarkMode(darkMode);
   }, [darkMode]);
