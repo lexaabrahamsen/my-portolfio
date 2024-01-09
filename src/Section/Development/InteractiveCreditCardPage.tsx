@@ -16,28 +16,32 @@ const InteractiveCreditCardPage: React.FC<
 
   return (
     <div
-      className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 mt-12"
-      style={{ backgroundColor: darkMode ? '#1f2937' : 'white' }}
+      className={` 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 mt-12 ${
+        darkMode ? 'dark-background' : 'light-background'
+      }`}
     >
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="w-full lg:w-5/12 flex flex-col justify-top">
-          <p
-            className="mt-2 text-9xl font-gloock font-bold tracking-tight text-gray-900 sm:text-4xl"
-            style={{ color: darkMode ? 'white' : '#1f2937' }}
+          <h3
+            className={`mt-2 text-4xl font-gloock font-bold tracking-tight text-gray-900 ${
+              darkMode ? 'light-font' : 'dark-font'
+            }`}
           >
             Interactive Credit Card
-          </p>
+          </h3>
           <div style={{ paddingTop: '15px' }}>
             <p
-              className="text-base font-outfit font-light leading-7 uppercase"
-              style={{ color: darkMode ? 'white' : '#1f2937' }}
+              className={`text-base font-outfit font-light leading-7 uppercase ${
+                darkMode ? 'light-font' : 'dark-font'
+              }`}
             >
               REACT / MATERIAL UI / ANIMATIONS
             </p>
           </div>
           <p
-            className="mt-6 text-xl leading-8 text-gray-700 font-outfit font-light"
-            style={{ color: darkMode ? 'white' : '#1f2937' }}
+            className={`mt-6 text-xl leading-8 text-gray-700 font-outfit font-light ${
+              darkMode ? 'light-font' : 'dark-font'
+            }`}
           >
             React Frontend: The project leverages the power of React to create a
             dynamic and responsive user interface. React's component-based

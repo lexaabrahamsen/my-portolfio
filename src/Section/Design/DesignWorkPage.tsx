@@ -43,7 +43,7 @@ const DesignWorkSection: FC<DesignWorkSectionProps> = () => {
         <button
           aria-label="Slide back"
           type="button"
-          className="absolute left-0 z-30 p-2 ml-10 focus:outline-none focus:dark:bg-gray-400 focus:ri focus:ri focus:ri"
+          className="absolute left-0 z-30 p-2 ml-10 focus:outline-none focus:dark:bg-gray-400 focus:ri focus:ri focus:ri text-black"
         >
           <svg
             width="8"
@@ -84,7 +84,7 @@ const DesignWorkSection: FC<DesignWorkSectionProps> = () => {
         <button
           aria-label="Slide forward"
           id="next"
-          className="absolute right-0 z-30 p-2 mr-10 focus:outline-none focus:dark:bg-gray-400 focus:ri focus:ri focus:ri"
+          className="absolute right-0 z-30 p-2 mr-10 focus:outline-none focus:dark:bg-gray-400 focus:ri focus:ri focus:ri text-black"
         >
           <svg
             width="8"
@@ -103,7 +103,6 @@ const DesignWorkSection: FC<DesignWorkSectionProps> = () => {
             ></path>
           </svg>
         </button>
-        {/* TODO: Add indicator dots */}
       </div>
     </div>
   );

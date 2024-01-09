@@ -1,17 +1,43 @@
+import { useContext } from 'react';
+import { DarkModeContext } from '../../DarkModeContext';
+
 export default function Blueprint() {
+  const darkModeContext = useContext(DarkModeContext);
+
+  if (!darkModeContext) {
+    throw new Error('useDarkMode must be used within a DarkModeProvider');
+  }
+
+  const { darkMode } = darkModeContext;
   return (
-    <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 mt-12">
+    <div
+      className={`2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4 mt-12 ${
+        darkMode ? 'dark-background' : 'light-background'
+      }`}
+    >
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="w-full lg:w-5/12 flex flex-col justify-top">
-          <p className="mt-2 text-9xl font-gloock font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h3
+            className={`mt-2 text-4xl font-gloock font-bold tracking-tight text-gray-900 ${
+              darkMode ? 'light-font' : 'dark-font'
+            }`}
+          >
             Blueprint
-          </p>
+          </h3>
           <div style={{ paddingTop: '15px' }}>
-            <p className="text-base font-outfit font-light leading-7 uppercase">
+            <p
+              className={`text-base font-outfit font-light leading-7 uppercase" ${
+                darkMode ? 'light-font' : 'dark-font'
+              }`}
+            >
               Meeting and Event Application
             </p>
           </div>
-          <p className="mt-6 text-xl leading-8 text-gray-700 font-outfit font-light">
+          <p
+            className={`mt-6 text-xl leading-8 text-gray-700 font-outfit font-light ${
+              darkMode ? 'light-font' : 'dark-font'
+            }`}
+          >
             Apogy Events, one app for all events. Meeting and event application
             that enhances attendee engagement. As the UI/UX Designer I focused
             on the experience for the user in attendance. My role was to create

@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Cred } from 'styled-icons/crypto';
 import TitleHeader from '../../components/TitleHeader';
 import { DarkModeContext } from '../../DarkModeContext';
 
@@ -7,7 +6,7 @@ interface DevelopmentWorkSectionProps {
   id?: string;
 }
 
-const DevelopmentWorkSection: React.FC<DevelopmentWorkSectionProps> = ({}) => {
+const DevelopmentWorkSection: React.FC<DevelopmentWorkSectionProps> = () => {
   const [show, setShow] = useState(false);
   const darkModeContext = useContext(DarkModeContext);
 

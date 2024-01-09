@@ -20,13 +20,13 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
     >
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="w-full lg:w-5/12 flex flex-col justify-top">
-          <p
-            className={`mt-2 text-9xl font-gloock font-bold tracking-tight text-gray-900 sm:text-4xl ${
+          <h3
+            className={`mt-2 text-4xl font-gloock font-bold tracking-tight text-gray-900 ${
               darkMode ? 'light-font' : 'dark-font'
             }`}
           >
             Portfolio Website
-          </p>
+          </h3>
           <div style={{ paddingTop: '15px' }}>
             <p
               className={`text-base font-outfit font-light leading-7 uppercase ${
@@ -45,10 +45,10 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
             reflection of my journey as a developer and a creative professional.
             <br />
             <br />
-            I wrote this project in React with TypeScript to enhance code quality and
-            provide a statically-typed development experience. Utilized
-            TypeScript's type-checking features to catch potential errors during
-            development.
+            I wrote this project in React with TypeScript to enhance code
+            quality and provide a statically-typed development experience.
+            Utilized TypeScript's type-checking features to catch potential
+            errors during development.
             <br />
             <br />
             Tailwind CSS was my choice for the CSS framework for styling.
@@ -61,10 +61,10 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
             deployment features for an efficient development workflow.
             <br />
             <br />
-            Integrated a Dark Mode feature using the
-            DarkModeProvider and useContext from React. Enables users to toggle
-            between light and dark themes, enhancing accessibility and
-            accommodating user preferences.
+            Integrated a Dark Mode feature using the DarkModeProvider and
+            useContext from React. Enables users to toggle between light and
+            dark themes, enhancing accessibility and accommodating user
+            preferences.
           </p>
           <div className="flex items-center pb-2 mt-6">
             <div
@@ -95,8 +95,16 @@ const PortfolioPage: React.FC<PortfolioPageProps> = () => {
           </div>
         </div>
         <div className="w-full lg:w-8/12">
-          <img src="../Portfolio1.jpg" className="w-full rounded-lg mb-8" alt="" />
-          <img src="../Portfolio2.jpg" className="w-full rounded-lg mb-8" alt="" />
+          <img
+            src="../Portfolio1.jpg"
+            className="w-full rounded-lg mb-8"
+            alt=""
+          />
+          <img
+            src="../Portfolio2.jpg"
+            className="w-full rounded-lg mb-8"
+            alt=""
+          />
         </div>
       </div>
     </div>
