@@ -118,7 +118,6 @@ const DevelopmentWorkSection: React.FC<DevelopmentWorkSectionProps> = () => {
             >
               <img
                 className="w-full rounded-lg"
-                // src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg"
                 src="MusicVizualizerDevProjectThumbnail.jpg"
                 alt=""
               />

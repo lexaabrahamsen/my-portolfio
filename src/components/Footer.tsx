@@ -20,15 +20,18 @@ const Footer: React.FC<FooterProps> = () => {
     <footer
       className={`p-5 ${darkMode ? 'dark-background' : 'light-background'}`}
     >
-      <div className="w-full mx-auto max-w-screen-xl p-3 md:flex sm:items-center md:justify-between">
+      <div className="w-full mx-auto max-w-screen-xl md:flex items-center md:justify-between ">
         <span
-          className={`font-outfit text-sm sm:text-center ${
+          className={`font-outfit text-sm sm:text-center px-5 ${
             darkMode ? 'light-font' : 'dark-font'
           }`}
         >
           © 2023. All Rights Reserved.
         </span>
+        <div className="px-5 mt-3">
+
         <SocialLinks />
+        </div>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
           {navigationLinks.map((item) => (
             <li className="px-5">
