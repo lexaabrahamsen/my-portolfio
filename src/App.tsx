@@ -1,7 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Blueprint from './Section/Design/Blueprint';
-import DesignWorkContentPageWip from './Section/Development/PortfolioPage';
 import DesignWork from './Section/Design/DesignWorkPage';
 import DevelopmentWorkSection from './Section/Development/DevelopmentWorkSection';
 import Footer from './components/Footer';
@@ -24,7 +23,6 @@ function App() {
     <DarkModeProvider>
       <Router>
         <Navbar />
-        {/* TODO: refer to seg to see how to organize route */}
         <Routes>
           <Route path="/header" element={<Header id="header" />} />
           <Route path="/" element={<Homepage />} />
@@ -34,23 +32,18 @@ function App() {
           <Route path="/development-work" element={<DevelopmentWorkSection />} />
           <Route path="/credit-card-form" element={<InteractiveCreditCardPage />} />
           <Route path="/music-visualizer" element={<MusicVisualizerPage />} />
-          <Route path="/project-3" element={<DesignWorkContentPageWip />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
 
           {/* // Design Work */}
           <Route path="/design-work" element={<DesignWork />} />
-          {/* <Route path="/portfolio-website" element={<PortfolioWebsite />} /> */}
           <Route path="/humanityco" element={<Humanityco />} />
           <Route path="/willspace" element={<Willspace />} />
           <Route path="/blueprint" element={<Blueprint />} />
           <Route path="/willspace-marketing" element={<WillspaceMarketing />} />
           <Route path="/website-work" element={<WebsiteWork />} />
           <Route path="learning-management-system" element={<LMS />} />
-
-          <Route path="/project-1" element={<DesignWorkContentPageWip />} />
         </Routes>
       </Router>
-
       <Footer />
     </DarkModeProvider>
   );
