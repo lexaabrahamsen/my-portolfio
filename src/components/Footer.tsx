@@ -28,9 +28,8 @@ const Footer: React.FC<FooterProps> = () => {
         >
           © 2023. All Rights Reserved.
         </span>
-        <div className="px-5 mt-3">
-
-        <SocialLinks />
+        <div className="px-5 mt-4 mb-4">
+          <SocialLinks />
         </div>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium sm:mt-0">
           {navigationLinks.map((item) => (

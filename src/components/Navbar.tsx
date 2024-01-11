@@ -1,17 +1,12 @@
 import { useContext, useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Github } from '@styled-icons/bootstrap/Github';
-import { Linkedin } from '@styled-icons/bootstrap/Linkedin';
-import { Mastodon } from '@styled-icons/bootstrap/Mastodon';
-import { Instagram } from '@styled-icons/bootstrap/Instagram';
 import { navigationLinks } from './navigation';
 
 import { DarkModeContext } from '../DarkModeContext';
 
 import Switch from './Switch';
-
-// interface NavbarProps {}
+import SocialLinksLight from './SocialLinksLight';
 
 const Navbar: React.FC = () => {
   const darkModeContext = useContext(DarkModeContext);
@@ -79,7 +74,10 @@ const Navbar: React.FC = () => {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel
+          style={{ backgroundColor: '#121820' }}
+          className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto px-6 py-6 sm:max-w-sm"
+        >
           <div className="flex items-center justify-end">
             <button
               type="button"
@@ -90,49 +88,26 @@ const Navbar: React.FC = () => {
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
+          <Switch />
+
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
+            <div className="-my-6 divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigationLinks.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg py-3 px-3 text-7xl font-light font-display leading-11 tracking-normal text-white hover:line-through"
+                    className="-mx-3 block rounded-lg py-3 px-3 text-6xl font-gloock font-light leading-11 tracking-normal text-white hover:line-through"
                   >
                     {item.name}
                   </a>
                 ))}
               </div>
-              <div className="group mt-10 inline-flex flex-wrap items-center gap-3">
-                <a href="https://github.com/lexaabrahamsen" target="_blank" rel="noreferrer">
-                  <span className="cursor-pointer rounded-full text-white p-3 hover:bg-neutral-900">
-                    <Github className="h-5 w-5" />
-                  </span>
-                </a>
-                <span className="cursor-pointer rounded-full text-white p-3 hover:bg-neutral-900">
-                  <a
-                    href="https://www.linkedin.com/in/lexa-abrahamsen/"
-                    target="_blank" rel="noreferrer"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </a>
-                </span>
-                <span className="cursor-pointer rounded-full text-white p-3 hover:bg-neutral-900">
-                  <a
-                    href="https://www.instagram.com/lexaraea/?hl=en"
-                    target="_blank" rel="noreferrer"
-                  >
-                    <Instagram className="h-5 w-5" />
-                  </a>
-                </span>
-                <span className="cursor-pointer rounded-full bg-white border border-white-200/5 bg-white-500/5 p-3 text-white-500 transition-colors hover:border-white-500/10 hover:bg-white-500/10 hover:!opacity-100">
-                  <a href="/" target="_blank" rel="noreferrer">
-                    <Mastodon className="h-5 w-5" />
-                  </a>
-                </span>
+              <div className="mb-9 mt-8">
+                <SocialLinksLight />
               </div>
               <div>
-                <a href="/" className="mt-7 text-white">
+                <a href="/" className="mt-7 text-white font-gloock">
                   Resume
                 </a>
               </div>

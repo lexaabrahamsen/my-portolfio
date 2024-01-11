@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { DarkModeContext } from '../DarkModeContext';
 
-interface SocialLinksProps {
+interface SocialLinksLightProps {
   darkMode?: boolean;
 }
 
-const SocialLinks: React.FC<SocialLinksProps> = () => {
+const SocialLinksLight: React.FC<SocialLinksLightProps> = () => {
   const darkModeContext = useContext(DarkModeContext);
 
   if (!darkModeContext) {
@@ -20,7 +20,7 @@ const SocialLinks: React.FC<SocialLinksProps> = () => {
         href="https://github.com/lexaabrahamsen"
         rel="noopener noreferrer"
         target="_blank"
-        style={{ color: darkMode ? 'white' : '#1f2937' }}
+        style={{ color: darkMode ? 'white' : 'white' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ const SocialLinks: React.FC<SocialLinksProps> = () => {
         href="https://www.linkedin.com/in/lexa-abrahamsen/"
         rel="noopener noreferrer"
         target="_blank"
-        style={{ color: darkMode ? 'white' : '#1f2937' }}
+        style={{ color: darkMode ? 'white' : 'white' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +56,7 @@ const SocialLinks: React.FC<SocialLinksProps> = () => {
         href="https://www.instagram.com/lexaraea/"
         rel="noopener noreferrer"
         target="_blank"
-        style={{ color: darkMode ? 'white' : '#1f2937' }}
+        style={{ color: darkMode ? 'white' : 'white' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ const SocialLinks: React.FC<SocialLinksProps> = () => {
         href="https://mastodon.social/@lexaraea"
         rel="noopener noreferrer"
         target="_blank"
-        style={{ color: darkMode ? 'white' : '#1f2937' }}
+        style={{ color: darkMode ? 'white' : 'white' }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -90,4 +90,4 @@ const SocialLinks: React.FC<SocialLinksProps> = () => {
   );
 }
 
-export default SocialLinks;
+export default SocialLinksLight;
