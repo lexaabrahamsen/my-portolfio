@@ -63,7 +63,7 @@ const MusicVizualizerPage: React.FC<MusicVizualizerPageProps> = () => {
               }`}
             >
               <a
-                href="https://effortless-granita-939235.netlify.app/"
+                href="https://lw-music-visualizer.netlify.app/"
                 className={`font-gloock ${
                   darkMode ? 'light-font' : 'dark-font'
                 }`}
