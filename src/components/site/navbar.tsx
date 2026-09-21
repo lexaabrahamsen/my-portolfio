@@ -5,18 +5,18 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { navigationLinks } from '@/lib/navigation';
 import { SocialLinks } from '@/components/site/social-links';
-import { ThemeToggle } from '@/components/site/theme-toggle';
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <Link to="/" className="-m-1.5 p-1.5">
-          <span className="font-heading text-xl font-medium uppercase tracking-wide">
-            Lexa Wong
-          </span>
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur">
+      <nav className="flex items-center justify-between p-6 lg:px-10" aria-label="Global">
+        <Link
+          to="/"
+          className="rounded-full border border-border px-4 py-1.5 font-heading text-lg tracking-wide hover:border-foreground/40 transition-colors"
+        >
+          Lexa Wong
         </Link>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-10 font-sans">
@@ -24,12 +24,11 @@ export function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold uppercase leading-6 hover:opacity-70 transition-opacity"
+              className="text-sm font-semibold uppercase tracking-wider leading-6 text-foreground/80 hover:text-foreground transition-colors"
             >
               {item.name}
             </a>
           ))}
-          <ThemeToggle />
         </div>
 
         <div className="flex lg:hidden">
@@ -39,10 +38,9 @@ export function Navbar() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-neutral-900 text-white border-none w-full sm:max-w-sm">
+            <SheetContent side="right" className="bg-black text-white border-l border-border w-full sm:max-w-sm">
               <SheetTitle className="sr-only">Navigation menu</SheetTitle>
-              <div className="mt-10 flex flex-col gap-6 px-6">
-                <ThemeToggle />
+              <div className="mt-10 flex flex-col gap-8 px-6">
                 <div className="flex flex-col gap-2">
                   {navigationLinks.map((item) => (
                     <a

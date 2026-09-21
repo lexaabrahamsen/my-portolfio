@@ -27,9 +27,8 @@ export function Portfolio() {
           development workflow.
           <br />
           <br />
-          Integrated a Dark Mode feature using a ThemeProvider and React context. Enables users to
-          toggle between light and dark themes, enhancing accessibility and accommodating user
-          preferences.
+          Designed as a dark, editorial-style experience with bold display type and high-contrast
+          typography throughout.
         </p>
       }
     />

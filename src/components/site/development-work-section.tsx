@@ -14,8 +14,8 @@ export function DevelopmentWorkSection() {
 
   return (
     <div ref={ref} id="development-work">
-      <TitleHeader title="Development Work" />
-      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-5 px-4 sm:grid-cols-2 sm:px-12 lg:px-16">
+      <TitleHeader title="Development" accent="selected work" />
+      <div className="mx-auto grid max-w-screen-xl grid-cols-1 gap-x-8 gap-y-12 px-4 sm:grid-cols-2 sm:px-12 lg:px-16">
         {developmentProjects.map((project) => (
           <ProjectTile key={project.id} {...project} />
         ))}
