@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar } from '@/components/site/navbar';
 import { Footer } from '@/components/site/footer';
 import { Home } from '@/pages/home';
+import { About } from '@/pages/about';
 import { Contact } from '@/pages/contact';
 import { MusicVisualizer } from '@/pages/development/music-visualizer';
 import { CreditCard } from '@/pages/development/credit-card';
@@ -21,6 +22,7 @@ function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
 
             {/* Development Work */}

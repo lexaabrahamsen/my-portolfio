@@ -9,6 +9,8 @@
     --font-sans: 'Outfit', sans-serif;
     --font-gloock: 'Gloock', serif;
     --font-outfit: 'Outfit', sans-serif;
+    --animate-dot-drift: dot-drift 18s linear infinite;
+    --animate-dot-pulse: dot-pulse 6s ease-in-out infinite;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -94,4 +96,23 @@
   html {
     @apply font-sans;
     }
+}
+
+@keyframes dot-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 28px 28px;
+  }
+}
+
+@keyframes dot-pulse {
+  0%,
+  100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.16;
+  }
 }
