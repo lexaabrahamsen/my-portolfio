@@ -1,10 +1,9 @@
-import { GithubIcon, InstagramIcon, LinkedinIcon, MastodonIcon } from '@/components/site/icons';
+import { GithubIcon, InstagramIcon, LinkedinIcon } from '@/components/site/icons';
 
 const links = [
   { href: 'https://github.com/lexaabrahamsen', label: 'GitHub', Icon: GithubIcon },
   { href: 'https://www.linkedin.com/in/lexa-abrahamsen/', label: 'LinkedIn', Icon: LinkedinIcon },
   { href: 'https://www.instagram.com/lexaraea/', label: 'Instagram', Icon: InstagramIcon },
-  { href: 'https://mastodon.social/@lexaraea', label: 'Mastodon', Icon: MastodonIcon },
 ];
 
 export function SocialLinks({ className }: { className?: string }) {
