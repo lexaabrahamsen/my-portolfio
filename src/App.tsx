@@ -1,51 +1,48 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Blueprint from './Section/Design/Blueprint';
-import DesignWork from './Section/Design/DesignWorkPage';
-import DevelopmentWorkSection from './Section/Development/DevelopmentWorkSection';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Homepage from './Section/Homepage';
-import Humanityco from './Section/Design/Humanityco';
-import Navbar from './components/Navbar';
-import Willspace from './Section/Design/Willspace';
-import WillspaceMarketing from './Section/Design/WillspaceMarketing';
-import WebsiteWork from './Section/Design/WebsiteWork';
-import LMS from './Section/Design/LMS';
-import Contact from './Section/Contact';
-import PortfolioPage from './Section/Development/PortfolioPage';
-import { DarkModeProvider } from './DarkModeContext';
-import MusicVisualizerPage from './Section/Development/MusicVizualizerPage';
-import InteractiveCreditCardPage from './Section/Development/InteractiveCreditCardPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@/lib/theme-provider';
+import { Navbar } from '@/components/site/navbar';
+import { Footer } from '@/components/site/footer';
+import { Home } from '@/pages/home';
+import { Contact } from '@/pages/contact';
+import { MusicVisualizer } from '@/pages/development/music-visualizer';
+import { CreditCard } from '@/pages/development/credit-card';
+import { Portfolio } from '@/pages/development/portfolio';
+import { Blueprint } from '@/pages/design/blueprint';
+import { Humanityco } from '@/pages/design/humanityco';
+import { LMS } from '@/pages/design/lms';
+import { WebsiteWork } from '@/pages/design/website-work';
+import { Willspace } from '@/pages/design/willspace';
+import { WillspaceMarketing } from '@/pages/design/willspace-marketing';
 
 function App() {
   return (
-    <DarkModeProvider>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/header" element={<Header id="header" />} />
-          <Route path="/" element={<Homepage />} />
-          <Route path="/contact" element={<Contact />} />
+    <ThemeProvider>
+      <BrowserRouter>
+        <div className="flex min-h-screen flex-col bg-background text-foreground">
+          <Navbar />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contact" element={<Contact />} />
 
-          {/* // Development Work */}
-          <Route path="/development-work" element={<DevelopmentWorkSection />} />
-          <Route path="/credit-card-form" element={<InteractiveCreditCardPage />} />
-          <Route path="/music-visualizer" element={<MusicVisualizerPage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
+              {/* Development Work */}
+              <Route path="/credit-card-form" element={<CreditCard />} />
+              <Route path="/music-visualizer" element={<MusicVisualizer />} />
+              <Route path="/portfolio" element={<Portfolio />} />
 
-          {/* // Design Work */}
-          <Route path="/design-work" element={<DesignWork />} />
-          <Route path="/humanityco" element={<Humanityco />} />
-          <Route path="/willspace" element={<Willspace />} />
-          <Route path="/blueprint" element={<Blueprint />} />
-          <Route path="/willspace-marketing" element={<WillspaceMarketing />} />
-          <Route path="/website-work" element={<WebsiteWork />} />
-          <Route path="learning-management-system" element={<LMS />} />
-        </Routes>
-      </Router>
-      <Footer />
-    </DarkModeProvider>
+              {/* Design Work */}
+              <Route path="/humanityco" element={<Humanityco />} />
+              <Route path="/willspace" element={<Willspace />} />
+              <Route path="/blueprint" element={<Blueprint />} />
+              <Route path="/willspace-marketing" element={<WillspaceMarketing />} />
+              <Route path="/website-work" element={<WebsiteWork />} />
+              <Route path="/learning-management-system" element={<LMS />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
