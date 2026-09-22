@@ -37,6 +37,8 @@ export interface SelectedWork {
   company: string;
   role: string;
   status: string;
+  tag: string;
+  image: string;
   link: string;
 }
 
@@ -46,6 +48,8 @@ export const selectedWorks: SelectedWork[] = [
     company: 'Gravie',
     role: 'Frontend Developer',
     status: 'Current',
+    tag: 'Health Benefits Platform',
+    image: '/GravieCover.jpg',
     link: 'https://www.gravie.com/',
   },
   {
@@ -53,6 +57,8 @@ export const selectedWorks: SelectedWork[] = [
     company: 'Take Command',
     role: 'Frontend Developer',
     status: 'Previous',
+    tag: 'HRA Administration Platform',
+    image: '/TakeCommandCover.jpg',
     link: 'https://www.takecommandhealth.com/',
   },
 ];

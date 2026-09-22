@@ -38,8 +38,11 @@ export function ProjectDetail({
                 Technologies
               </h2>
               <ul className="mt-4 flex flex-col gap-2">
-                {techStack.map((tech) => (
-                  <li key={tech} className="font-sans text-lg">
+                {techStack.map((tech, index) => (
+                  <li key={tech} className="flex items-baseline gap-3 font-sans text-lg">
+                    <span className="text-sm text-muted-foreground">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
                     {tech}
                   </li>
                 ))}
