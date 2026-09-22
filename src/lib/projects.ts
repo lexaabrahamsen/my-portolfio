@@ -25,10 +25,35 @@ export const developmentProjects: DevProject[] = [
   },
   {
     id: 3,
-    title: 'Portfolio Website',
-    description: 'This website was built with React, TypeScript, and Tailwind CSS.',
-    image: '/PortfolioHomepage.jpg',
-    link: '/portfolio',
+    title: 'Password Generator',
+    description: 'A Vue.js app for generating secure, customizable passwords.',
+    image: '/PasswordGeneratorThumbnail.jpg',
+    link: '/password-generator',
+  },
+];
+
+export interface SelectedWork {
+  id: number;
+  company: string;
+  role: string;
+  status: string;
+  link: string;
+}
+
+export const selectedWorks: SelectedWork[] = [
+  {
+    id: 1,
+    company: 'Gravie',
+    role: 'Frontend Developer',
+    status: 'Current',
+    link: 'https://www.gravie.com/',
+  },
+  {
+    id: 2,
+    company: 'Take Command',
+    role: 'Frontend Developer',
+    status: 'Previous',
+    link: 'https://www.takecommandhealth.com/',
   },
 ];
 

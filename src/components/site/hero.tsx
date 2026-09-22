@@ -15,9 +15,9 @@ export function Hero() {
       </Suspense>
       <div className="relative z-10 mx-auto max-w-screen-xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24 lg:px-10">
         <h1 className="font-sans text-6xl font-bold uppercase leading-[0.95] tracking-tight sm:text-8xl lg:text-9xl">
-          <span className="font-heading text-[0.4em] normal-case italic">I&apos;m a</span>{' '}
+          <span className="font-accent text-[0.4em] font-light normal-case italic">I&apos;m a</span>{' '}
           Frontend Developer{' '}
-          <span className="font-heading text-[0.4em] normal-case italic">&amp;</span>{' '}
+          <span className="font-accent text-[0.4em] font-light normal-case italic">&amp;</span>{' '}
           UI Designer
         </h1>
         <p className="mt-8 max-w-2xl text-xl leading-relaxed text-muted-foreground sm:text-2xl">

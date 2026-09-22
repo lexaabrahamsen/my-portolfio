@@ -6,7 +6,7 @@ import { About } from '@/pages/about';
 import { Contact } from '@/pages/contact';
 import { MusicVisualizer } from '@/pages/development/music-visualizer';
 import { CreditCard } from '@/pages/development/credit-card';
-import { Portfolio } from '@/pages/development/portfolio';
+import { PasswordGenerator } from '@/pages/development/password-generator';
 import { Blueprint } from '@/pages/design/blueprint';
 import { Humanityco } from '@/pages/design/humanityco';
 import { LMS } from '@/pages/design/lms';
@@ -28,7 +28,7 @@ function App() {
             {/* Development Work */}
             <Route path="/credit-card-form" element={<CreditCard />} />
             <Route path="/music-visualizer" element={<MusicVisualizer />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/password-generator" element={<PasswordGenerator />} />
 
             {/* Design Work */}
             <Route path="/humanityco" element={<Humanityco />} />
