@@ -61,6 +61,15 @@ export const selectedWorks: SelectedWork[] = [
     image: '/TakeCommandCover.jpg',
     link: 'https://www.takecommandhealth.com/',
   },
+  {
+    id: 3,
+    company: 'Carrier Source',
+    role: 'WordPress Developer',
+    status: 'Client',
+    tag: 'Technology Advisory Website',
+    image: '/CarrierSourceCover.jpg',
+    link: 'https://carriersource.com/',
+  },
 ];
 
 export const designProjects = [
