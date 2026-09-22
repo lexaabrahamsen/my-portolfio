@@ -8,9 +8,18 @@ interface ProjectDetailProps {
   images: string[];
   demoUrl?: string;
   githubUrl?: string;
+  techStack?: string[];
 }
 
-export function ProjectDetail({ title, category, description, images, demoUrl, githubUrl }: ProjectDetailProps) {
+export function ProjectDetail({
+  title,
+  category,
+  description,
+  images,
+  demoUrl,
+  githubUrl,
+  techStack,
+}: ProjectDetailProps) {
   return (
     <div className="mx-auto mt-12 max-w-screen-xl px-4 py-9 sm:px-6 md:py-12 lg:px-20 lg:py-16">
       <div className="flex flex-col justify-between gap-8 lg:flex-row">
@@ -23,8 +32,23 @@ export function ProjectDetail({ title, category, description, images, demoUrl, g
             {description}
           </div>
 
+          {techStack && techStack.length > 0 && (
+            <div className="mt-8 border-t border-border pt-6">
+              <h2 className="font-sans text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+                Technologies
+              </h2>
+              <ul className="mt-4 flex flex-col gap-2">
+                {techStack.map((tech) => (
+                  <li key={tech} className="font-sans text-lg">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
           {demoUrl && (
-            <div className="mt-6 flex items-center gap-2 pb-2">
+            <div className="mt-8 flex items-center gap-2 border-t border-border pb-2 pt-6">
               <a
                 href={demoUrl}
                 target="_blank"
@@ -38,7 +62,7 @@ export function ProjectDetail({ title, category, description, images, demoUrl, g
           )}
 
           {githubUrl && (
-            <div className="mt-8 flex items-center gap-2 pb-2">
+            <div className="mt-2 flex items-center gap-2 pb-2">
               <GithubIcon className="h-5 w-5" />
               <a
                 href={githubUrl}

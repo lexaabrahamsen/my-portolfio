@@ -5,6 +5,7 @@ export function MusicVisualizer() {
     <ProjectDetail
       title="Music Visualizer"
       category="JavaScript / HTML5 Canvas"
+      techStack={['React', 'JavaScript', 'Web Audio API', 'HTML5 Canvas']}
       demoUrl="https://lw-music-visualizer.netlify.app/"
       githubUrl="https://github.com/lexaabrahamsen/music-visualizer"
       images={['/MusicVizualizerDevProjectThumbnail.jpg']}

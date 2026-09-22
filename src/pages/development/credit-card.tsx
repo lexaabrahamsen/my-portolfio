@@ -5,6 +5,7 @@ export function CreditCard() {
     <ProjectDetail
       title="Interactive Credit Card"
       category="React / Material UI / Animations"
+      techStack={['React', 'Material UI', 'JavaScript', 'CSS Animations']}
       demoUrl="https://elegant-trifle-0a151d.netlify.app/"
       githubUrl="https://github.com/lexaabrahamsen/credit-card-form"
       images={['/CreditCardFeatureDark.jpg']}

@@ -5,6 +5,7 @@ export function PasswordGenerator() {
     <ProjectDetail
       title="Password Generator"
       category="Vue.js / JavaScript"
+      techStack={['Vue.js', 'JavaScript', 'CSS']}
       demoUrl="https://lexa-password-generator.netlify.app/"
       githubUrl="https://github.com/lexaabrahamsen/vue-password-generator"
       images={['/PasswordGeneratorThumbnail.jpg']}
