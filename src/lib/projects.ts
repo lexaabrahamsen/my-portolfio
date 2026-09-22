@@ -4,6 +4,7 @@ export interface DevProject {
   description: string;
   image: string;
   link: string;
+  discipline: string;
 }
 
 export const developmentProjects: DevProject[] = [
@@ -14,6 +15,7 @@ export const developmentProjects: DevProject[] = [
       'React frontend, Material UI framework, and captivating animations to elevate the user experience in credit card input forms.',
     image: '/CreditCardHomepageDark.jpg',
     link: '/credit-card-form',
+    discipline: 'Frontend Development',
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ export const developmentProjects: DevProject[] = [
       'This project offers an interactive and engaging way to experience music through a simple yet effective visual representation.',
     image: '/MusicVizualizerDevProjectThumbnail.jpg',
     link: '/music-visualizer',
+    discipline: 'Frontend Development',
   },
   {
     id: 3,
@@ -29,6 +32,7 @@ export const developmentProjects: DevProject[] = [
     description: 'A Vue.js app for generating secure, customizable passwords.',
     image: '/PasswordGeneratorThumbnail.jpg',
     link: '/password-generator',
+    discipline: 'Frontend Development',
   },
 ];
 
@@ -72,13 +76,14 @@ export const selectedWorks: SelectedWork[] = [
   },
 ];
 
-export const designProjects = [
+export const designProjects: DevProject[] = [
   {
     id: 1,
     title: 'Hu-manity.co',
     description: 'Data Privacy application',
     image: '/HumanitycoCover.jpg',
     link: '/humanityco',
+    discipline: 'UI/UX',
   },
   {
     id: 2,
@@ -86,6 +91,7 @@ export const designProjects = [
     description: 'Fitness mobile application',
     image: '/WillspaceCoverOption2.jpg',
     link: '/willspace',
+    discipline: 'UI/UX',
   },
   {
     id: 3,
@@ -93,6 +99,7 @@ export const designProjects = [
     description: 'Build websites that encapsulate their brand and business.',
     image: '/WebsiteWorkCover.jpg',
     link: '/website-work',
+    discipline: 'UI/UX',
   },
   {
     id: 4,
@@ -100,6 +107,7 @@ export const designProjects = [
     description: 'Meetings and events application',
     image: '/BlueprintCover.jpg',
     link: '/blueprint',
+    discipline: 'UI/UX',
   },
   {
     id: 5,
@@ -107,6 +115,7 @@ export const designProjects = [
     description: 'Fitness and lifestyle',
     image: '/WillspaceMarketingCover.jpg',
     link: '/willspace-marketing',
+    discipline: 'UI/UX',
   },
 ];
 
