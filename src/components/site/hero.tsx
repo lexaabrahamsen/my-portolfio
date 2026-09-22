@@ -5,7 +5,7 @@ const VantaDots = lazy(() =>
   import('@/components/site/vanta-dots').then((m) => ({ default: m.VantaDots })),
 );
 
-const TAKE_COMMAND_GREEN = '#2fe3a3';
+const GRAVIE_CYAN = '#5df4cc';
 
 export function Hero() {
   return (
@@ -14,22 +14,22 @@ export function Hero() {
         <VantaDots />
       </Suspense>
       <div className="relative z-10 mx-auto max-w-screen-xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24 lg:px-10">
-        <p className="font-heading text-2xl italic text-foreground/70 sm:text-3xl">currently</p>
         <h1 className="font-sans text-6xl font-bold uppercase leading-[0.95] tracking-tight sm:text-8xl lg:text-9xl">
-          Front-end
-          <br />
-          Developer
+          <span className="font-heading text-[0.4em] normal-case italic">I&apos;m a</span>{' '}
+          Frontend Developer{' '}
+          <span className="font-heading text-[0.4em] normal-case italic">&amp;</span>{' '}
+          UI Designer
         </h1>
         <p className="mt-8 max-w-2xl text-xl leading-relaxed text-muted-foreground sm:text-2xl">
-          Juggling health insurance at{' '}
+          Building at{' '}
           <a
             rel="noopener noreferrer"
-            href="https://www.takecommandhealth.com/"
+            href="https://www.gravie.com/"
             target="_blank"
             className="font-semibold underline decoration-2"
-            style={{ color: TAKE_COMMAND_GREEN }}
+            style={{ color: GRAVIE_CYAN }}
           >
-            Take Command
+            Gravie
           </a>
           . <span className="font-heading italic">Former UI/UX Designer</span> for 10 years.
         </p>
