@@ -1,28 +1,22 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { TitleHeader } from '@/components/site/title-header';
 import { designProjects } from '@/lib/projects';
 
 export function DesignWorkSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (window.location.hash === '#design-work' && sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, []);
 
   const scroll = (direction: 'left' | 'right') => {
     scrollerRef.current?.scrollBy({ left: direction === 'left' ? -360 : 360, behavior: 'smooth' });
   };
 
   return (
-    <div>
-      <TitleHeader title="Design" accent="selected work" />
-      <div ref={sectionRef} id="design-work" className="relative mx-auto max-w-screen-xl px-4 sm:px-12 lg:px-16">
+    <div className="mt-20">
+      <p className="mx-auto max-w-screen-xl px-4 font-heading text-2xl italic text-muted-foreground sm:px-12 sm:text-3xl lg:px-16">
+        UI / UX Designer
+      </p>
+      <div className="relative mx-auto mt-6 max-w-screen-xl px-4 sm:px-12 lg:px-16">
         <div ref={scrollerRef} className="flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-2">
           {designProjects.map((project) => (
             <Link key={project.id} to={project.link} className="group shrink-0 snap-start">
