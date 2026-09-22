@@ -3,8 +3,7 @@ import { Hero } from '@/components/site/hero';
 import { ManifestoSection } from '@/components/site/manifesto-section';
 import { SelectedWorksSection } from '@/components/site/selected-works-section';
 import { TitleHeader } from '@/components/site/title-header';
-import { DevelopmentWorkSection } from '@/components/site/development-work-section';
-import { DesignWorkSection } from '@/components/site/design-work-section';
+import { ProjectsSection } from '@/components/site/projects-section';
 
 export function Home() {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -22,8 +21,7 @@ export function Home() {
       <SelectedWorksSection />
       <div ref={projectsRef} id="development-work">
         <TitleHeader title="Projects" accent="all work" />
-        <DevelopmentWorkSection />
-        <DesignWorkSection />
+        <ProjectsSection />
       </div>
     </div>
   );
