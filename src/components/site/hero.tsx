@@ -1,14 +1,18 @@
+import { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import { DotGrid } from '@/components/site/dot-grid';
-import { CodeDraw } from '@/components/site/code-draw';
+
+const VantaDots = lazy(() =>
+  import('@/components/site/vanta-dots').then((m) => ({ default: m.VantaDots })),
+);
 
 const TAKE_COMMAND_GREEN = '#2fe3a3';
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <DotGrid />
-      <CodeDraw />
+      <Suspense fallback={null}>
+        <VantaDots />
+      </Suspense>
       <div className="relative z-10 mx-auto max-w-screen-xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24 lg:px-10">
         <p className="font-heading text-2xl italic text-foreground/70 sm:text-3xl">currently</p>
         <h1 className="font-sans text-6xl font-bold uppercase leading-[0.95] tracking-tight sm:text-8xl lg:text-9xl">
