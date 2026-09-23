@@ -13,11 +13,11 @@ export function ProjectTile({ title, description, image, link, discipline }: Pro
 
   const content = (
     <div className="group">
-      <div className="relative overflow-hidden rounded-lg">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
         <img
           src={image}
           alt={title}
-          className="w-full transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
         {discipline && (
           <span className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/60 px-3 py-1 font-sans text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-sm">

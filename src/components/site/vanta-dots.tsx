@@ -43,7 +43,7 @@ export function VantaDots() {
         scale: 1.0,
         scaleMobile: 1.0,
         color: 0xffffff,
-        color2: 0xf4a15d,
+        color2: 0x5df4cc,
         backgroundColor: 0x0,
         backgroundAlpha: 0,
         size: 3.2,
