@@ -50,7 +50,7 @@ export const selectedWorks: SelectedWork[] = [
   {
     id: 1,
     company: 'Gravie',
-    role: 'Frontend Developer',
+    role: 'Senior Frontend Developer',
     status: 'Current',
     tag: 'Health Benefits Platform',
     image: '/GravieCover.jpg',
@@ -59,7 +59,7 @@ export const selectedWorks: SelectedWork[] = [
   {
     id: 2,
     company: 'Take Command',
-    role: 'Frontend Developer',
+    role: 'Senior Frontend Developer',
     status: 'Previous',
     tag: 'HRA Administration Platform',
     image: '/TakeCommandCover.jpg',
