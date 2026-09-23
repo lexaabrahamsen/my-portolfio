@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { Hero } from '@/components/site/hero';
 import { ManifestoSection } from '@/components/site/manifesto-section';
 import { SelectedWorksSection } from '@/components/site/selected-works-section';
@@ -6,12 +6,10 @@ import { TitleHeader } from '@/components/site/title-header';
 import { ProjectsSection } from '@/components/site/projects-section';
 
 export function Home() {
-  const projectsRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    if (window.location.hash === '#development-work' && projectsRef.current) {
-      projectsRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (!window.location.hash) return;
+    const el = document.getElementById(window.location.hash.slice(1));
+    el?.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
   return (
@@ -19,7 +17,7 @@ export function Home() {
       <Hero />
       <ManifestoSection />
       <SelectedWorksSection />
-      <div ref={projectsRef} id="development-work">
+      <div id="development-work">
         <TitleHeader title="Projects" accent="all work" />
         <ProjectsSection />
       </div>
