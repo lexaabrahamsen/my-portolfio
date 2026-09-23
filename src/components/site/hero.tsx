@@ -1,24 +1,52 @@
-const TAKE_COMMAND_GREEN = '#188a68';
+import { lazy, Suspense } from 'react';
+import { Link } from 'react-router-dom';
+
+const VantaDots = lazy(() =>
+  import('@/components/site/vanta-dots').then((m) => ({ default: m.VantaDots })),
+);
+
+const GRAVIE_CYAN = '#5df4cc';
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="relative z-10 mx-auto max-w-screen-xl px-4 pb-20 pt-10 sm:px-6 sm:py-24 lg:px-8">
-        <div className="mt-14 max-w-4xl space-y-8 text-left sm:ml-auto">
-          <h1 className="font-sans text-5xl font-bold tracking-tight sm:text-7xl lg:text-8xl">
-            Front-end developer currently juggling health insurance at{' '}
-            <a
-              rel="noopener noreferrer"
-              href="https://www.takecommandhealth.com/"
-              target="_blank"
-              style={{ color: TAKE_COMMAND_GREEN }}
-            >
-              Take Command
-            </a>
-          </h1>
-          <h2 className="font-heading text-lg italic font-normal">
-            Former UI/UX Designer for 10 years
-          </h2>
+      <Suspense fallback={null}>
+        <VantaDots />
+      </Suspense>
+      <div className="relative z-10 mx-auto max-w-screen-xl px-4 pb-16 pt-16 sm:px-6 sm:pt-24 lg:px-10">
+        <h1 className="font-sans text-6xl font-bold uppercase leading-[0.95] tracking-tight sm:text-8xl lg:text-9xl">
+          <span className="font-accent text-[0.4em] font-light normal-case italic">I&apos;m a</span>{' '}
+          Frontend Developer{' '}
+          <span className="font-accent text-[0.4em] font-light normal-case italic">&amp;</span>{' '}
+          UI Designer
+        </h1>
+        <p className="mt-8 max-w-2xl text-xl leading-relaxed text-muted-foreground sm:text-2xl">
+          Building at{' '}
+          <a
+            rel="noopener noreferrer"
+            href="https://www.gravie.com/"
+            target="_blank"
+            className="font-semibold underline decoration-2"
+            style={{ color: GRAVIE_CYAN }}
+          >
+            Gravie
+          </a>
+          . <span className="font-heading italic">Former UI/UX Designer</span> for 10 years.
+        </p>
+
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <Link
+            to="/about"
+            className="rounded-full bg-foreground px-6 py-3 font-sans text-sm font-semibold uppercase tracking-wide text-background transition-opacity hover:opacity-80"
+          >
+            Know more &#8599;
+          </Link>
+          <Link
+            to="/contact"
+            className="rounded-full border border-border px-6 py-3 font-sans text-sm font-semibold uppercase tracking-wide transition-colors hover:border-foreground/50"
+          >
+            Contact &#8599;
+          </Link>
         </div>
       </div>
     </section>
