@@ -13,24 +13,26 @@ export function ProjectTile({ title, description, image, link, discipline }: Pro
 
   const content = (
     <div className="group">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-        <img
-          src={image}
-          alt={title}
-          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-        />
-        {discipline && (
-          <span className="absolute left-3 top-3 rounded-full border border-white/20 bg-black/60 px-3 py-1 font-sans text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-sm">
-            {discipline}
-          </span>
-        )}
+      <div className="relative rounded-2xl bg-card p-3">
+        <div className="aspect-[4/3] overflow-hidden rounded-xl">
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+        </div>
+        <div className="absolute -bottom-4 -right-4 flex h-12 w-12 items-center justify-center rounded-full bg-foreground text-background shadow-lg transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+          <span className="font-heading text-lg">&#8599;</span>
+        </div>
       </div>
-      <div className="mt-4 flex items-baseline justify-between gap-4 border-t border-border pt-3">
-        <h3 className="font-sans text-xl font-bold uppercase tracking-tight">{title}</h3>
-        <span className="shrink-0 font-heading italic text-foreground/60 transition-transform group-hover:translate-x-1">
-          &#8599;
+
+      {discipline && (
+        <span className="mt-6 inline-block rounded-full bg-secondary px-4 py-1.5 font-sans text-xs font-semibold uppercase tracking-wide text-secondary-foreground">
+          {discipline}
         </span>
-      </div>
+      )}
+
+      <h3 className="mt-4 font-sans text-2xl font-bold uppercase tracking-tight">{title}</h3>
       <p className="mt-1 text-sm text-muted-foreground">{description}</p>
     </div>
   );
