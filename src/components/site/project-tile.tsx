@@ -19,7 +19,7 @@ export function ProjectTile({ title, description, image, link, discipline }: Pro
     <div className="group">
       <div className="relative">
         <div
-          className="aspect-[4/3] overflow-hidden rounded-[28px] bg-card"
+          className="aspect-[4/3] overflow-hidden rounded-[28px] bg-background"
           style={{
             WebkitMaskImage: NOTCH_MASK,
             maskImage: NOTCH_MASK,
