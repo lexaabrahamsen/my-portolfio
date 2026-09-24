@@ -10,7 +10,7 @@ interface ProjectTileProps {
 }
 
 const NOTCH_MASK =
-  'radial-gradient(circle 32px at calc(100% - 12px) calc(100% - 12px), transparent 32px, black 33px)';
+  'radial-gradient(circle 44px at calc(100% - 12px) calc(100% - 12px), transparent 44px, black 45px)';
 
 export function ProjectTile({ title, description, image, link, discipline }: ProjectTileProps) {
   const isExternal = link.startsWith('http');
@@ -37,7 +37,7 @@ export function ProjectTile({ title, description, image, link, discipline }: Pro
       </div>
 
       {discipline && (
-        <span className="mt-6 inline-block rounded-full bg-secondary px-4 py-1.5 font-sans text-xs font-semibold uppercase tracking-wide text-secondary-foreground">
+        <span className="mt-6 inline-block rounded-full border border-border bg-foreground/[0.03] px-3 py-1 font-sans text-xs font-semibold uppercase tracking-wide text-muted-foreground">
           {discipline}
         </span>
       )}

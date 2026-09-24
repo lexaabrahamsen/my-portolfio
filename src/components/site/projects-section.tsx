@@ -1,7 +1,17 @@
 import { ProjectTile } from '@/components/site/project-tile';
 import { developmentProjects, designProjects } from '@/lib/projects';
 
-const allProjects = [...developmentProjects, ...designProjects];
+function interleave<T>(a: T[], b: T[]): T[] {
+  const result: T[] = [];
+  const max = Math.max(a.length, b.length);
+  for (let i = 0; i < max; i++) {
+    if (a[i]) result.push(a[i]);
+    if (b[i]) result.push(b[i]);
+  }
+  return result;
+}
+
+const allProjects = interleave(developmentProjects, designProjects);
 
 export function ProjectsSection() {
   return (
