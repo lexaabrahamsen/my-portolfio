@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ScrollToTop } from '@/components/site/scroll-to-top';
 import { Navbar } from '@/components/site/navbar';
 import { Footer } from '@/components/site/footer';
 import { Home } from '@/pages/home';
@@ -17,6 +18,7 @@ import { WillspaceMarketing } from '@/pages/design/willspace-marketing';
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex min-h-screen flex-col bg-background text-foreground">
         <Navbar />
         <main className="flex-1">
