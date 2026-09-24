@@ -14,7 +14,7 @@ export function Navbar() {
       <nav className="flex items-center justify-between p-6 lg:px-10" aria-label="Global">
         <Link
           to="/"
-          className="rounded-full border border-border px-4 py-1.5 font-heading text-lg tracking-wide hover:border-foreground/40 transition-colors"
+          className="rounded-full border-2 border-foreground px-4 py-1.5 font-heading text-lg tracking-wide transition-colors hover:border-foreground/70"
         >
           Lexa Wong
         </Link>
