@@ -25,15 +25,20 @@ export function ProjectDetail({
   return (
     <div className="mt-8">
       {heroImage && (
-        <div className="relative mx-auto max-w-4xl px-4">
-          <img src={heroImage} alt="" className="w-full rounded-lg" />
-          <h1 className="absolute inset-0 flex items-center justify-center px-2 text-center font-sans text-5xl font-bold uppercase leading-[0.9] text-white [mix-blend-mode:difference] sm:text-7xl lg:text-8xl">
+        <div className="relative mx-auto max-w-2xl px-4">
+          <img
+            src={heroImage}
+            alt=""
+            className="w-full rounded-lg shadow-[0_30px_60px_-15px_rgba(255,255,255,0.12)]"
+          />
+          <div className="absolute inset-x-4 inset-y-0 rounded-lg bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+          <h1 className="absolute inset-x-4 inset-y-0 flex items-center justify-center px-4 text-center font-sans text-4xl font-bold uppercase leading-[0.9] text-white sm:text-6xl lg:text-7xl">
             {title}
           </h1>
         </div>
       )}
 
-      <div className="mx-auto mt-6 flex max-w-4xl flex-wrap items-center justify-between gap-4 border-b border-border px-4 pb-8">
+      <div className="mx-auto mt-6 flex max-w-2xl flex-wrap items-center justify-between gap-4 border-b border-border px-4 pb-8">
         <span className="font-sans text-sm font-light uppercase tracking-wide text-foreground/70">
           {category}
         </span>
