@@ -31,7 +31,6 @@ export function Hero() {
           >
             Gravie
           </a>
-          . <span className="font-heading italic">Former UI/UX Designer</span> for 10 years.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
