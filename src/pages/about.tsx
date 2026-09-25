@@ -25,7 +25,7 @@ export function About() {
         <img
           src="/profile.jpg"
           alt=""
-          className="absolute inset-0 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 h-full w-full object-cover object-[50%_25%] opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
         <div className="relative z-10 mx-auto max-w-screen-xl px-4 py-24 sm:px-6 sm:py-32 lg:px-10">
