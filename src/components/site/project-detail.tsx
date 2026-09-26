@@ -48,7 +48,7 @@ export function ProjectDetail({
               href={demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 font-heading italic hover:opacity-70"
+              className="flex items-center gap-2 font-accent italic hover:opacity-70"
             >
               View demo
               <ArrowRightIcon className="h-4 w-4" />

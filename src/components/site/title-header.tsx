@@ -5,7 +5,7 @@ export function TitleHeader({ title, accent }: { title: string; accent?: string 
         {title}
       </h2>
       {accent && (
-        <p className="mt-1 font-heading text-2xl italic text-foreground/70 sm:text-4xl lg:text-5xl">
+        <p className="mt-2 font-accent text-2xl italic tracking-normal text-foreground/70 sm:text-4xl lg:text-5xl">
           {accent}
         </p>
       )}

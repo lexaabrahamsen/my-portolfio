@@ -44,7 +44,7 @@ export function SelectedWorksSection() {
                     <h3 className="font-sans text-3xl font-bold uppercase tracking-tight sm:text-4xl">
                       {work.company}
                     </h3>
-                    <p className="font-heading italic text-muted-foreground">{work.role}</p>
+                    <p className="font-accent italic text-muted-foreground">{work.role}</p>
                     <span className="mt-1 inline-flex items-center gap-1 font-sans text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                       {work.tag}
                       <ArrowRightIcon className="h-3 w-3" />

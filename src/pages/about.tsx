@@ -29,7 +29,7 @@ export function About() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/10" />
         <div className="relative z-10 mx-auto max-w-screen-xl px-4 py-24 sm:px-6 sm:py-32 lg:px-10">
-          <p className="font-heading text-2xl italic text-foreground/70 sm:text-3xl">
+          <p className="font-accent text-2xl italic text-foreground/70 sm:text-3xl">
             hi there, I&apos;m
           </p>
           <h1 className="font-sans text-6xl font-bold uppercase leading-none tracking-tight sm:text-8xl lg:text-9xl">
@@ -39,7 +39,7 @@ export function About() {
       </section>
 
       <section className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-10">
-        <p className="text-center font-heading text-3xl italic text-foreground/70 sm:text-4xl">
+        <p className="text-center font-accent text-3xl italic text-foreground/70 sm:text-4xl">
           the resume
         </p>
         <p className="mx-auto mt-6 max-w-3xl text-center text-xl leading-relaxed sm:text-2xl">

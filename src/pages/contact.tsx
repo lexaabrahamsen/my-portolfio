@@ -6,7 +6,7 @@ export function Contact() {
       <h1 className="font-sans text-4xl font-bold uppercase leading-none tracking-tight sm:text-6xl lg:text-8xl">
         Get in touch
       </h1>
-      <p className="mt-2 font-heading text-2xl italic text-foreground/70 sm:text-3xl lg:text-4xl">
+      <p className="mt-2 font-accent text-2xl italic text-foreground/70 sm:text-3xl lg:text-4xl">
         let&apos;s build something
       </p>
 
@@ -18,7 +18,7 @@ export function Contact() {
           href="mailto:lexaraea@gmail.com"
           rel="noopener noreferrer"
           target="_blank"
-          className="mt-4 block font-heading text-3xl italic underline hover:opacity-70 sm:text-4xl"
+          className="mt-4 block font-accent text-3xl italic underline hover:opacity-70 sm:text-4xl"
         >
           lexaraea@gmail.com
         </a>
