@@ -8,6 +8,7 @@ import { Contact } from '@/pages/contact';
 import { MusicVisualizer } from '@/pages/development/music-visualizer';
 import { CreditCard } from '@/pages/development/credit-card';
 import { PasswordGenerator } from '@/pages/development/password-generator';
+import { GithubStatsDashboard } from '@/pages/development/github-stats-dashboard';
 import { Blueprint } from '@/pages/design/blueprint';
 import { Humanityco } from '@/pages/design/humanityco';
 import { LMS } from '@/pages/design/lms';
@@ -31,6 +32,7 @@ function App() {
             <Route path="/credit-card-form" element={<CreditCard />} />
             <Route path="/music-visualizer" element={<MusicVisualizer />} />
             <Route path="/password-generator" element={<PasswordGenerator />} />
+            <Route path="/github-stats-dashboard" element={<GithubStatsDashboard />} />
 
             {/* Design Work */}
             <Route path="/humanityco" element={<Humanityco />} />

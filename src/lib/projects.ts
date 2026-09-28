@@ -34,6 +34,15 @@ export const developmentProjects: DevProject[] = [
     link: '/password-generator',
     discipline: 'Vue.js',
   },
+  {
+    id: 4,
+    title: 'GitHub Stats Dashboard',
+    description:
+      'Search any GitHub user to explore their profile, language breakdown, and top repositories through interactive charts.',
+    image: '/GithubStatsDashboardThumbnail.jpg',
+    link: '/github-stats-dashboard',
+    discipline: 'React',
+  },
 ];
 
 export interface SelectedWork {
