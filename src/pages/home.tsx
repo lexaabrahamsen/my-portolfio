@@ -4,6 +4,7 @@ import { ManifestoSection } from '@/components/site/manifesto-section';
 import { SelectedWorksSection } from '@/components/site/selected-works-section';
 import { TitleHeader } from '@/components/site/title-header';
 import { ProjectsSection } from '@/components/site/projects-section';
+import { GitHubActivitySection } from '@/components/site/github-activity-section';
 
 export function Home() {
   useEffect(() => {
@@ -21,6 +22,7 @@ export function Home() {
         <TitleHeader title="Projects" accent="all work" />
         <ProjectsSection />
       </div>
+      <GitHubActivitySection />
     </div>
   );
 }
