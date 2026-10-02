@@ -44,7 +44,7 @@ export function VantaDots() {
         scaleMobile: 1.0,
         color: 0xffffff,
         color2: 0x5df4cc,
-        backgroundColor: 0x0,
+        backgroundColor: 0x121212, // matches --background
         backgroundAlpha: 0,
         size: 3.2,
         spacing: 38.0,

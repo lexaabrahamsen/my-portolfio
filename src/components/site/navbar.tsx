@@ -38,7 +38,7 @@ export function Navbar() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-black text-white border-l border-border w-full sm:max-w-sm">
+            <SheetContent side="right" className="bg-background text-white border-l border-border w-full sm:max-w-sm">
               <SheetTitle className="sr-only">Navigation menu</SheetTitle>
               <div className="mt-10 flex flex-col gap-8 px-6">
                 <div className="flex flex-col gap-2">
