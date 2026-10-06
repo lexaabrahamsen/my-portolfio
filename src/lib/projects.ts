@@ -29,15 +29,6 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Interactive Credit Card',
-    description:
-      'React frontend, Material UI framework, and captivating animations to elevate the user experience in credit card input forms.',
-    image: '/CreditCardHomepageDark.jpg',
-    link: '/credit-card-form',
-    discipline: 'React',
-  },
-  {
-    id: 4,
     title: 'Hu-manity.co',
     description: 'Data Privacy application',
     image: '/HumanitycoCover.jpg',
@@ -45,7 +36,23 @@ export const projects: Project[] = [
     discipline: 'UI/UX',
   },
   {
+    id: 4,
+    title: 'Password Generator',
+    description: 'A Vue.js app for generating secure, customizable passwords.',
+    image: '/PasswordGeneratorThumbnail.jpg',
+    link: '/password-generator',
+    discipline: 'Vue.js',
+  },
+  {
     id: 5,
+    title: 'Willspace',
+    description: 'Fitness mobile application',
+    image: '/WillspaceCoverOption2.jpg',
+    link: '/willspace',
+    discipline: 'UI/UX',
+  },
+  {
+    id: 6,
     title: 'Music Visualizer',
     description:
       'This project offers an interactive and engaging way to experience music through a simple yet effective visual representation.',
@@ -54,28 +61,21 @@ export const projects: Project[] = [
     discipline: 'React',
   },
   {
-    id: 6,
-    title: 'Willspace',
-    description: 'Fitness mobile application',
-    image: '/WillspaceCoverOption2.jpg',
-    link: '/willspace',
-    discipline: 'UI/UX',
-  },
-  {
     id: 7,
-    title: 'Password Generator',
-    description: 'A Vue.js app for generating secure, customizable passwords.',
-    image: '/PasswordGeneratorThumbnail.jpg',
-    link: '/password-generator',
-    discipline: 'Vue.js',
-  },
-  {
-    id: 8,
     title: 'Website work',
     description: 'Build websites that encapsulate their brand and business.',
     image: '/WebsiteWorkCover.jpg',
     link: '/website-work',
     discipline: 'UI/UX',
+  },
+  {
+    id: 8,
+    title: 'Interactive Credit Card',
+    description:
+      'React frontend, Material UI framework, and captivating animations to elevate the user experience in credit card input forms.',
+    image: '/CreditCardHomepageDark.jpg',
+    link: '/credit-card-form',
+    discipline: 'React',
   },
   {
     id: 9,
