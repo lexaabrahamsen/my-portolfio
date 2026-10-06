@@ -1,4 +1,4 @@
-export interface DevProject {
+export interface Project {
   id: number;
   title: string;
   description: string;
@@ -7,9 +7,10 @@ export interface DevProject {
   discipline: string;
 }
 
-export const developmentProjects: DevProject[] = [
+// Shown in this exact order in the Projects grid. Move an entry to reorder the site.
+export const projects: Project[] = [
   {
-    id: 5,
+    id: 1,
     title: 'ICE Accountability Dashboard',
     description:
       'Public-interest dashboard of ICE detention facilities, deaths in custody, and corporate boycott targets, refreshed daily from official sources.',
@@ -18,7 +19,16 @@ export const developmentProjects: DevProject[] = [
     discipline: 'React',
   },
   {
-    id: 1,
+    id: 2,
+    title: 'GitHub Stats Dashboard',
+    description:
+      'Search any GitHub user to explore their profile, language breakdown, and top repositories through interactive charts.',
+    image: '/GithubStatsDashboardThumbnail.jpg',
+    link: '/github-stats-dashboard',
+    discipline: 'React',
+  },
+  {
+    id: 3,
     title: 'Interactive Credit Card',
     description:
       'React frontend, Material UI framework, and captivating animations to elevate the user experience in credit card input forms.',
@@ -27,7 +37,15 @@ export const developmentProjects: DevProject[] = [
     discipline: 'React',
   },
   {
-    id: 2,
+    id: 4,
+    title: 'Hu-manity.co',
+    description: 'Data Privacy application',
+    image: '/HumanitycoCover.jpg',
+    link: '/humanityco',
+    discipline: 'UI/UX',
+  },
+  {
+    id: 5,
     title: 'Music Visualizer',
     description:
       'This project offers an interactive and engaging way to experience music through a simple yet effective visual representation.',
@@ -36,7 +54,15 @@ export const developmentProjects: DevProject[] = [
     discipline: 'React',
   },
   {
-    id: 3,
+    id: 6,
+    title: 'Willspace',
+    description: 'Fitness mobile application',
+    image: '/WillspaceCoverOption2.jpg',
+    link: '/willspace',
+    discipline: 'UI/UX',
+  },
+  {
+    id: 7,
     title: 'Password Generator',
     description: 'A Vue.js app for generating secure, customizable passwords.',
     image: '/PasswordGeneratorThumbnail.jpg',
@@ -44,13 +70,28 @@ export const developmentProjects: DevProject[] = [
     discipline: 'Vue.js',
   },
   {
-    id: 4,
-    title: 'GitHub Stats Dashboard',
-    description:
-      'Search any GitHub user to explore their profile, language breakdown, and top repositories through interactive charts.',
-    image: '/GithubStatsDashboardThumbnail.jpg',
-    link: '/github-stats-dashboard',
-    discipline: 'React',
+    id: 8,
+    title: 'Website work',
+    description: 'Build websites that encapsulate their brand and business.',
+    image: '/WebsiteWorkCover.jpg',
+    link: '/website-work',
+    discipline: 'UI/UX',
+  },
+  {
+    id: 9,
+    title: 'Blueprint',
+    description: 'Meetings and events application',
+    image: '/BlueprintCover.jpg',
+    link: '/blueprint',
+    discipline: 'UI/UX',
+  },
+  {
+    id: 10,
+    title: 'Willspace',
+    description: 'Fitness and lifestyle',
+    image: '/WillspaceMarketingCover.jpg',
+    link: '/willspace-marketing',
+    discipline: 'UI/UX',
   },
 ];
 
@@ -91,49 +132,6 @@ export const selectedWorks: SelectedWork[] = [
     tag: 'Technology Advisory Website',
     image: '/CarrierSourceCover.jpg',
     link: 'https://carriersource.com/',
-  },
-];
-
-export const designProjects: DevProject[] = [
-  {
-    id: 1,
-    title: 'Hu-manity.co',
-    description: 'Data Privacy application',
-    image: '/HumanitycoCover.jpg',
-    link: '/humanityco',
-    discipline: 'UI/UX',
-  },
-  {
-    id: 2,
-    title: 'Willspace',
-    description: 'Fitness mobile application',
-    image: '/WillspaceCoverOption2.jpg',
-    link: '/willspace',
-    discipline: 'UI/UX',
-  },
-  {
-    id: 3,
-    title: 'Website work',
-    description: 'Build websites that encapsulate their brand and business.',
-    image: '/WebsiteWorkCover.jpg',
-    link: '/website-work',
-    discipline: 'UI/UX',
-  },
-  {
-    id: 4,
-    title: 'Blueprint',
-    description: 'Meetings and events application',
-    image: '/BlueprintCover.jpg',
-    link: '/blueprint',
-    discipline: 'UI/UX',
-  },
-  {
-    id: 5,
-    title: 'Willspace',
-    description: 'Fitness and lifestyle',
-    image: '/WillspaceMarketingCover.jpg',
-    link: '/willspace-marketing',
-    discipline: 'UI/UX',
   },
 ];
 
