@@ -13,7 +13,7 @@ export const developmentProjects: DevProject[] = [
     title: 'ICE Accountability Dashboard',
     description:
       'Public-interest dashboard of ICE detention facilities, deaths in custody, and corporate boycott targets, refreshed daily from official sources.',
-    image: '/IceAccountabilityDashboardThumbnail.jpg',
+    image: '/IceAccountabilityDashboardTile.jpg',
     link: '/ice-accountability-dashboard',
     discipline: 'React',
   },
