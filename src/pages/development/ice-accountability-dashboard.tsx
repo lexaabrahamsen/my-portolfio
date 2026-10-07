@@ -17,7 +17,7 @@ export function IceAccountabilityDashboard() {
       ]}
       demoUrl="https://ice-accountability-dashboard.netlify.app/"
       githubUrl="https://github.com/lexaabrahamsen/ice-accountability-dashboard"
-      images={['/IceAccountabilityDashboardThumbnail.jpg']}
+      images={['/IceAccountabilityDashboardTile.jpg']}
       description={
         <p>
           A public-interest dashboard built from official sources: every ICE detention facility on
