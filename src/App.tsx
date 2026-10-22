@@ -9,6 +9,7 @@ import { MusicVisualizer } from '@/pages/development/music-visualizer';
 import { CreditCard } from '@/pages/development/credit-card';
 import { PasswordGenerator } from '@/pages/development/password-generator';
 import { IceAccountabilityDashboard } from '@/pages/development/ice-accountability-dashboard';
+import { EmissionsLeaderboard } from '@/pages/development/emissions-leaderboard';
 import { GithubStatsDashboard } from '@/pages/development/github-stats-dashboard';
 import { Blueprint } from '@/pages/design/blueprint';
 import { Humanityco } from '@/pages/design/humanityco';
@@ -31,6 +32,7 @@ function App() {
 
             {/* Development Work */}
             <Route path="/ice-accountability-dashboard" element={<IceAccountabilityDashboard />} />
+            <Route path="/emissions-leaderboard" element={<EmissionsLeaderboard />} />
             <Route path="/credit-card-form" element={<CreditCard />} />
             <Route path="/music-visualizer" element={<MusicVisualizer />} />
             <Route path="/password-generator" element={<PasswordGenerator />} />
