@@ -20,6 +20,15 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    title: 'Healthcare Lottery',
+    description:
+      "What one household pays for health care in the US versus five other countries, across a healthy year, a baby, and a serious illness.",
+    image: '/HealthcareLotteryTile.jpg',
+    link: '/healthcare-lottery',
+    discipline: 'React',
+  },
+  {
+    id: 3,
     title: 'Carbon Majors Leaderboard',
     description:
       'Which oil, gas, coal, and cement producers are behind global emissions, ranked from 1854 to today with Carbon Majors and Our World in Data.',
@@ -28,7 +37,7 @@ export const projects: Project[] = [
     discipline: 'Astro',
   },
   {
-    id: 3,
+    id: 4,
     title: 'GitHub Stats Dashboard',
     description:
       'Search any GitHub user to explore their profile, language breakdown, and top repositories through interactive charts.',
@@ -37,7 +46,7 @@ export const projects: Project[] = [
     discipline: 'React',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Hu-manity.co',
     description: 'Data Privacy application',
     image: '/HumanitycoCover.jpg',
@@ -45,7 +54,7 @@ export const projects: Project[] = [
     discipline: 'UI/UX',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Password Generator',
     description: 'A Vue.js app for generating secure, customizable passwords.',
     image: '/PasswordGeneratorThumbnail.jpg',
@@ -53,7 +62,7 @@ export const projects: Project[] = [
     discipline: 'Vue.js',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Willspace',
     description: 'Fitness mobile application',
     image: '/WillspaceCoverOption2.jpg',
@@ -61,7 +70,7 @@ export const projects: Project[] = [
     discipline: 'UI/UX',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Music Visualizer',
     description:
       'This project offers an interactive and engaging way to experience music through a simple yet effective visual representation.',
@@ -70,7 +79,7 @@ export const projects: Project[] = [
     discipline: 'React',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Website work',
     description: 'Build websites that encapsulate their brand and business.',
     image: '/WebsiteWorkCover.jpg',
@@ -78,7 +87,7 @@ export const projects: Project[] = [
     discipline: 'UI/UX',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Interactive Credit Card',
     description:
       'React frontend, Material UI framework, and captivating animations to elevate the user experience in credit card input forms.',
@@ -87,7 +96,7 @@ export const projects: Project[] = [
     discipline: 'React',
   },
   {
-    id: 10,
+    id: 11,
     title: 'Blueprint',
     description: 'Meetings and events application',
     image: '/BlueprintCover.jpg',
@@ -95,7 +104,7 @@ export const projects: Project[] = [
     discipline: 'UI/UX',
   },
   {
-    id: 11,
+    id: 12,
     title: 'Willspace',
     description: 'Fitness and lifestyle',
     image: '/WillspaceMarketingCover.jpg',
