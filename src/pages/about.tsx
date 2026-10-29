@@ -1,4 +1,4 @@
-import { AmazonIcon, MetaIcon } from '@/components/site/icons';
+import { AmazonIcon, ArrowUpRightIcon, MetaIcon } from '@/components/site/icons';
 
 const learnings = [
   {
@@ -54,6 +54,17 @@ export function About() {
           that not only look good but resonate deeply with users. I thrive on challenges and stay
           ahead of the curve, constantly evolving in the ever-changing tech landscape.
         </p>
+        <div className="mt-10 flex justify-center">
+          <a
+            href="/Lexa_Wong_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 font-sans text-sm font-semibold uppercase tracking-wide text-black transition-opacity hover:opacity-80"
+          >
+            View resume (PDF)
+            <ArrowUpRightIcon className="h-4 w-4" />
+          </a>
+        </div>
       </section>
 
       <section className="mx-auto max-w-screen-xl border-t border-border px-4 py-16 sm:px-6 lg:px-10">
