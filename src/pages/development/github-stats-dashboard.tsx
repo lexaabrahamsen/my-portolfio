@@ -6,6 +6,7 @@ export function GithubStatsDashboard() {
       title="GitHub Stats Dashboard"
       category="React / TypeScript / Data Visualization"
       techStack={['React', 'TypeScript', 'Material UI', 'TanStack Query', 'GitHub REST API']}
+      demoUrl="https://lexa-github-stats-dashboard.netlify.app/"
       githubUrl="https://github.com/lexaabrahamsen/github-stats-dashboard"
       images={['/GithubStatsDashboardThumbnail.jpg']}
       description={
